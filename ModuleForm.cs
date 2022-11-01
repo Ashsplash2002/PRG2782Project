@@ -10,19 +10,11 @@ using System.Windows.Forms;
 
 namespace PRG2782Project
 {
-    public partial class LoginForm : Form
+    public partial class ModuleForm : Form
     {
-        public LoginForm()
+        public ModuleForm()
         {
             InitializeComponent();
-        }
-
-        private void btnlogin_Click(object sender, EventArgs e)
-        {
-            MenuForm menu = new MenuForm();
-            menu.Show();
-            this.Hide();
-
         }
     }
 }
