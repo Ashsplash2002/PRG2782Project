@@ -50,7 +50,7 @@
             this.btnCreate = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
-            this.btnRead = new System.Windows.Forms.Button();
+            this.btnseeall = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.btnMenu = new System.Windows.Forms.Button();
@@ -233,7 +233,7 @@
             this.groupBox2.Controls.Add(this.btnCreate);
             this.groupBox2.Controls.Add(this.btnDelete);
             this.groupBox2.Controls.Add(this.btnUpdate);
-            this.groupBox2.Controls.Add(this.btnRead);
+            this.groupBox2.Controls.Add(this.btnseeall);
             this.groupBox2.Location = new System.Drawing.Point(12, 539);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(598, 100);
@@ -243,7 +243,8 @@
             // 
             // btnSearch
             // 
-            this.btnSearch.BackColor = System.Drawing.Color.White;
+            this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearch.Location = new System.Drawing.Point(232, 33);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(122, 44);
@@ -253,7 +254,8 @@
             // 
             // btnCreate
             // 
-            this.btnCreate.BackColor = System.Drawing.Color.White;
+            this.btnCreate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCreate.Location = new System.Drawing.Point(6, 33);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(110, 44);
@@ -263,7 +265,8 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.BackColor = System.Drawing.Color.White;
+            this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.Location = new System.Drawing.Point(483, 33);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(106, 44);
@@ -273,7 +276,8 @@
             // 
             // btnUpdate
             // 
-            this.btnUpdate.BackColor = System.Drawing.Color.White;
+            this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdate.Location = new System.Drawing.Point(122, 33);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(104, 44);
@@ -281,15 +285,16 @@
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
             // 
-            // btnRead
+            // btnseeall
             // 
-            this.btnRead.BackColor = System.Drawing.Color.White;
-            this.btnRead.Location = new System.Drawing.Point(360, 33);
-            this.btnRead.Name = "btnRead";
-            this.btnRead.Size = new System.Drawing.Size(117, 44);
-            this.btnRead.TabIndex = 0;
-            this.btnRead.Text = "Read";
-            this.btnRead.UseVisualStyleBackColor = false;
+            this.btnseeall.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnseeall.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnseeall.Location = new System.Drawing.Point(360, 33);
+            this.btnseeall.Name = "btnseeall";
+            this.btnseeall.Size = new System.Drawing.Size(117, 44);
+            this.btnseeall.TabIndex = 0;
+            this.btnseeall.Text = "See All";
+            this.btnseeall.UseVisualStyleBackColor = false;
             // 
             // dataGridView1
             // 
@@ -313,7 +318,8 @@
             // 
             // btnMenu
             // 
-            this.btnMenu.BackColor = System.Drawing.Color.White;
+            this.btnMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMenu.Location = new System.Drawing.Point(649, 572);
             this.btnMenu.Name = "btnMenu";
             this.btnMenu.Size = new System.Drawing.Size(260, 44);
@@ -343,7 +349,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(1372, 651);
             this.Controls.Add(this.btnMenu);
             this.Controls.Add(this.label1);
@@ -388,7 +394,7 @@
         private System.Windows.Forms.Button btnCreate;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnUpdate;
-        private System.Windows.Forms.Button btnRead;
+        private System.Windows.Forms.Button btnseeall;
         private System.Windows.Forms.Button btnMenu;
         private System.Windows.Forms.TextBox txtstudentsurname;
         private System.Windows.Forms.Label label10;
