@@ -12,3 +12,17 @@ C:\Users\matth\Source\Repos\PRG2782Project\obj\Debug\PRG2782Project.csproj.Gener
 C:\Users\matth\Source\Repos\PRG2782Project\obj\Debug\PRG2782Project.csproj.CoreCompileInputs.cache
 C:\Users\matth\Source\Repos\PRG2782Project\obj\Debug\PRG2782Project.exe
 C:\Users\matth\Source\Repos\PRG2782Project\obj\Debug\PRG2782Project.pdb
+C:\Users\matth\OneDrive\Documents\checkProject\bin\Debug\PRG2782Project.exe.config
+C:\Users\matth\OneDrive\Documents\checkProject\bin\Debug\PRG2782Project.exe
+C:\Users\matth\OneDrive\Documents\checkProject\bin\Debug\PRG2782Project.pdb
+C:\Users\matth\OneDrive\Documents\checkProject\obj\Debug\PRG2782Project.csproj.AssemblyReference.cache
+C:\Users\matth\OneDrive\Documents\checkProject\obj\Debug\PRG2782Project.csproj.SuggestedBindingRedirects.cache
+C:\Users\matth\OneDrive\Documents\checkProject\obj\Debug\PRG2782Project.LoginForm.resources
+C:\Users\matth\OneDrive\Documents\checkProject\obj\Debug\PRG2782Project.MenuForm.resources
+C:\Users\matth\OneDrive\Documents\checkProject\obj\Debug\PRG2782Project.ModuleForm.resources
+C:\Users\matth\OneDrive\Documents\checkProject\obj\Debug\PRG2782Project.Properties.Resources.resources
+C:\Users\matth\OneDrive\Documents\checkProject\obj\Debug\PRG2782Project.StudentForm.resources
+C:\Users\matth\OneDrive\Documents\checkProject\obj\Debug\PRG2782Project.csproj.GenerateResource.cache
+C:\Users\matth\OneDrive\Documents\checkProject\obj\Debug\PRG2782Project.csproj.CoreCompileInputs.cache
+C:\Users\matth\OneDrive\Documents\checkProject\obj\Debug\PRG2782Project.exe
+C:\Users\matth\OneDrive\Documents\checkProject\obj\Debug\PRG2782Project.pdb
