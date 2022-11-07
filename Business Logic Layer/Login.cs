@@ -6,11 +6,13 @@ using System.Threading.Tasks;
 
 namespace PRG2782Project
 {
-    internal class Login_Class
+    internal class Login
     {
         private string name, password;
 
-        public Login_Class(string name, string password)
+        public Login() { }
+
+        public Login(string name, string password)
         {
             this.name = name;
             this.password = password;
