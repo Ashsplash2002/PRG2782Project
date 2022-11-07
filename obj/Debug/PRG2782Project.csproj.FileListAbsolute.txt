@@ -26,3 +26,17 @@ C:\Users\matth\OneDrive\Documents\checkProject\obj\Debug\PRG2782Project.csproj.G
 C:\Users\matth\OneDrive\Documents\checkProject\obj\Debug\PRG2782Project.csproj.CoreCompileInputs.cache
 C:\Users\matth\OneDrive\Documents\checkProject\obj\Debug\PRG2782Project.exe
 C:\Users\matth\OneDrive\Documents\checkProject\obj\Debug\PRG2782Project.pdb
+C:\Users\Heinrich\source\repos\PRG2782\bin\Debug\PRG2782Project.exe.config
+C:\Users\Heinrich\source\repos\PRG2782\bin\Debug\PRG2782Project.exe
+C:\Users\Heinrich\source\repos\PRG2782\bin\Debug\PRG2782Project.pdb
+C:\Users\Heinrich\source\repos\PRG2782\obj\Debug\PRG2782Project.csproj.AssemblyReference.cache
+C:\Users\Heinrich\source\repos\PRG2782\obj\Debug\PRG2782Project.csproj.SuggestedBindingRedirects.cache
+C:\Users\Heinrich\source\repos\PRG2782\obj\Debug\PRG2782Project.LoginForm.resources
+C:\Users\Heinrich\source\repos\PRG2782\obj\Debug\PRG2782Project.MenuForm.resources
+C:\Users\Heinrich\source\repos\PRG2782\obj\Debug\PRG2782Project.ModuleForm.resources
+C:\Users\Heinrich\source\repos\PRG2782\obj\Debug\PRG2782Project.Properties.Resources.resources
+C:\Users\Heinrich\source\repos\PRG2782\obj\Debug\PRG2782Project.StudentForm.resources
+C:\Users\Heinrich\source\repos\PRG2782\obj\Debug\PRG2782Project.csproj.GenerateResource.cache
+C:\Users\Heinrich\source\repos\PRG2782\obj\Debug\PRG2782Project.csproj.CoreCompileInputs.cache
+C:\Users\Heinrich\source\repos\PRG2782\obj\Debug\PRG2782Project.exe
+C:\Users\Heinrich\source\repos\PRG2782\obj\Debug\PRG2782Project.pdb
