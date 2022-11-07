@@ -19,29 +19,58 @@ namespace PRG2782Project
 
         private void btnStudent_Click(object sender, EventArgs e)
         {
-            StudentForm student = new StudentForm();
-            student.Show();
-            this.Hide();
+            try
+            {
+                StudentForm student = new StudentForm();
+                student.Show();
+                this.Hide();
+            }
+             catch (Exception ex)
+            {
+                MessageBox.Show("Something went wrong: " + ex);
+            }
         }
 
         private void btnModule_Click(object sender, EventArgs e)
         {
-            ModuleForm module = new ModuleForm();
-            module.Show();
-            this.Hide();
+            try
+            {
+                ModuleForm module = new ModuleForm();
+                module.Show();
+                this.Hide();
+            }
+             catch (Exception ex)
+            {
+                MessageBox.Show("Something went wrong: " + ex);
+            }
         }
 
         private void btnlogout_Click(object sender, EventArgs e)
         {
-            LoginForm login = new LoginForm();
-            login.Show();
-            this.Hide();
+            try
+            {
+                LoginForm login = new LoginForm();
+                login.Show();
+                this.Hide();
+            }
+             catch (Exception ex)
+            {
+                MessageBox.Show("Something went wrong: " + ex);
+            }
 
         }
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            Environment.Exit(0);
+            try
+            {
+                Environment.Exit(0);
+            }
+           
+             catch (Exception ex)
+            {
+                MessageBox.Show("Something went wrong: " + ex);
+            }
         }
     }
 }

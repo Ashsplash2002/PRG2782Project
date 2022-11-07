@@ -24,9 +24,17 @@ namespace PRG2782Project
 
         private void btnMenu_Click(object sender, EventArgs e)
         {
-            MenuForm menu = new MenuForm();
-            menu.Show();
-            this.Hide();
+            try
+            {
+                MenuForm menu = new MenuForm();
+                menu.Show();
+                this.Hide();
+            }
+           
+            catch (Exception ex)
+            {
+                MessageBox.Show("Something went wrong: " + ex);
+            }
         }
     }
 }
