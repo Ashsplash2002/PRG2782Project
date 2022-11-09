@@ -48,42 +48,36 @@
   <ItemGroup>
     <Compile Include="Data Access Layer\DataHandler.cs" />
     <Compile Include="Business Logic Layer\Login.cs" />
-    <Compile Include="Presentation Layer\MenuForm.cs">
+    <Compile Include="Presentation Layer\frmLoginNEW.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentation Layer\MenuForm.Designer.cs">
-      <DependentUpon>MenuForm.cs</DependentUpon>
+    <Compile Include="Presentation Layer\frmLoginNEW.Designer.cs">
+      <DependentUpon>frmLoginNEW.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentation Layer\LoginForm.cs">
+    <Compile Include="Presentation Layer\frmMenuNEW.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentation Layer\LoginForm.Designer.cs">
-      <DependentUpon>LoginForm.cs</DependentUpon>
+    <Compile Include="Presentation Layer\frmMenuNEW.Designer.cs">
+      <DependentUpon>frmMenuNEW.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\frmModuleNEW.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\frmModuleNEW.Designer.cs">
+      <DependentUpon>frmModuleNEW.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\frmStudentNEW.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\frmStudentNEW.Designer.cs">
+      <DependentUpon>frmStudentNEW.cs</DependentUpon>
     </Compile>
     <Compile Include="Business Logic Layer\Module.cs" />
-    <Compile Include="Presentation Layer\ModuleForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Presentation Layer\ModuleForm.Designer.cs">
-      <DependentUpon>ModuleForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Business Logic Layer\Student.cs" />
-    <Compile Include="Presentation Layer\StudentForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Presentation Layer\StudentForm.Designer.cs">
-      <DependentUpon>StudentForm.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="Presentation Layer\LoginForm.resx">
-      <DependentUpon>LoginForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Presentation Layer\MenuForm.resx">
-      <DependentUpon>MenuForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Presentation Layer\ModuleForm.resx">
-      <DependentUpon>ModuleForm.cs</DependentUpon>
+    <EmbeddedResource Include="Presentation Layer\frmLoginNEW.resx">
+      <DependentUpon>frmLoginNEW.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -95,9 +89,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Presentation Layer\StudentForm.resx">
-      <DependentUpon>StudentForm.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
