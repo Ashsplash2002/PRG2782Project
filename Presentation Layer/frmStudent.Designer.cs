@@ -1,6 +1,6 @@
 ﻿namespace PRG2782Project
 {
-    partial class StudentForm
+    partial class frmStudent
     {
         /// <summary>
         /// Required designer variable.

@@ -10,26 +10,31 @@ using System.Windows.Forms;
 
 namespace PRG2782Project
 {
-    public partial class LoginForm : Form
+    public partial class frmStudent : Form
     {
-        public LoginForm()
+        public frmStudent()
         {
             InitializeComponent();
         }
 
-        private void btnlogin_Click(object sender, EventArgs e)
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnMenu_Click(object sender, EventArgs e)
         {
             try
             {
-                MenuForm menu = new MenuForm();
+                frmMenu menu = new frmMenu();
                 menu.Show();
                 this.Hide();
             }
-           catch(Exception ex)
+           
+            catch (Exception ex)
             {
-                MessageBox.Show("Something went wrong: "+ex);
+                MessageBox.Show("Something went wrong: " + ex);
             }
-
         }
     }
 }

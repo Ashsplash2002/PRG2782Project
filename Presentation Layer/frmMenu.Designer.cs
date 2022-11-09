@@ -1,6 +1,6 @@
 ﻿namespace PRG2782Project
 {
-    partial class MenuForm
+    partial class frmMenu
     {
         /// <summary>
         /// Required designer variable.
