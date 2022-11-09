@@ -17,6 +17,8 @@ namespace PRG2782Project.Presentation_Layer
             InitializeComponent();
         }
 
+
+
         private void btnMenu_Click(object sender, EventArgs e)
         {
             try
@@ -29,6 +31,11 @@ namespace PRG2782Project.Presentation_Layer
             {
                 MessageBox.Show("Something went wrong: " + ex);
             }
+        }
+
+        private void btnCreate_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

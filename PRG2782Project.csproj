@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="Data Access Layer\DataHandler.cs" />
     <Compile Include="Business Logic Layer\Login.cs" />
+    <Compile Include="Data Access Layer\FileHandler.cs" />
     <Compile Include="Presentation Layer\frmLoginNEW.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +82,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation Layer\frmMenuNEW.resx">
       <DependentUpon>frmMenuNEW.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\frmModuleNEW.resx">
+      <DependentUpon>frmModuleNEW.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
