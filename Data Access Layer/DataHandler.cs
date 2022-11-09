@@ -4,6 +4,8 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+
 
 namespace PRG2782Project
 {
@@ -12,20 +14,40 @@ namespace PRG2782Project
     {
 
         //might need to change settings in Sql Configuration Manager. 'SQL Server' must be running. Enable TCP/IP.
-        public SqlConnection conn = new SqlConnection("Data Source=(local);Initial Catalog=databasename;Integrated Security=SSPI");
+        string connect = @"Data Source=(local)\SQLEXPRESS; Initial Catalog=;Integrated Security=sspi";
+        SqlConnection conn;
+        SqlCommand cmd;
+        SqlDataReader rdr;
 
 
 
-        
+
         List<Module> modules = new List<Module>();
         List<Student> students = new List<Student>();
         List<Login> logins = new List<Login>();
 
 
         //shouldn't these go in file handler class? There are 6 here.
-        public void WriteModule()
+        public void WriteStudent(string studentNumber, string studentName, string studentSurname,string studentImage,string studentGender,string studentPhone,string studentAddress,string moduleCodes, DateTime studentDOB)
         {
-
+            string queryinsert = @"Insert into students  Values('" + studentNumber + "','" + studentName + "','" + studentSurname + "','" + studentImage + "','" + studentGender + 
+                "','" + studentPhone + "','" + studentAddress + "','" + moduleCodes + "','" + studentDOB + "')";
+            conn = new SqlConnection(connect);
+            conn.Open();
+            cmd = new SqlCommand(queryinsert, conn);
+            try
+            {
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Student details saved successfully");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Details not saved: " + ex);
+            }
+            finally
+            {
+                conn.Close();
+            }
         }
 
         public List<Module> ReadModule()
@@ -35,9 +57,25 @@ namespace PRG2782Project
 
 
 
-        public void WriteStudent()
+        public void WriteModule(string moduleCode,string moduleName,string moduleDescription, string moduleLink)
         {
-
+            string queryinsert = @"Insert into modules Values('" + moduleCode + "','" + moduleName + "','" + moduleDescription + "','" + moduleLink + "')";
+            conn = new SqlConnection(connect);
+            conn.Open();
+            cmd = new SqlCommand(queryinsert, conn);
+            try
+            {
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Module details saved successfully");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Details not saved: " + ex);
+            }
+            finally
+            {
+                conn.Close();
+            }
         }
 
         public List<Student> ReadStudent()
@@ -47,21 +85,28 @@ namespace PRG2782Project
 
 
 
-        public void WriteLogin()
-        {
-
-        }
-
-        public List<Login> ReadLogin()
-        {
-            return logins;
-        }
-
+        
 
         //4 DataHandler Methods Added:
-        public void studentDelete()
+        public void studentDelete(string studentID)
         {
-
+            string queryinsert = @"Delete from students Where StudentID=('" + studentID + "')";
+            conn = new SqlConnection(connect);
+            conn.Open();
+            cmd = new SqlCommand(queryinsert, conn);
+            try
+            {
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Student details deleted successfully");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Details not saved: " + ex);
+            }
+            finally
+            {
+                conn.Close();
+            }
 
         }
 
@@ -89,9 +134,25 @@ namespace PRG2782Project
             Console.ReadLine();
         }
 
-        public void studentRead()
+        public void moduleDelete(string moduleID)
         {
-
+            string queryinsert = @"Delete from modules Where StudentID=('" + moduleID + "')";
+            conn = new SqlConnection(connect);
+            conn.Open();
+            cmd = new SqlCommand(queryinsert, conn);
+            try
+            {
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Student details deleted successfully");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Details not saved: " + ex);
+            }
+            finally
+            {
+                conn.Close();
+            }
         }
 
         public void studentUpdate()
