@@ -76,8 +76,8 @@ namespace PRG2782Project.Data_Access_Layer
             }
 
             return logins;
-
         }
+
 
         public static string Base64Encode(string plainText)
         {
