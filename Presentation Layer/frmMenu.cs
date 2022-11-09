@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PRG2782Project
 {
-    public partial class MenuForm : Form
+    public partial class frmMenu : Form
     {
-        public MenuForm()
+        public frmMenu()
         {
             InitializeComponent();
         }
@@ -21,7 +21,7 @@ namespace PRG2782Project
         {
             try
             {
-                StudentForm student = new StudentForm();
+                frmStudent student = new frmStudent();
                 student.Show();
                 this.Hide();
             }
@@ -35,7 +35,7 @@ namespace PRG2782Project
         {
             try
             {
-                ModuleForm module = new ModuleForm();
+                frmModule module = new frmModule();
                 module.Show();
                 this.Hide();
             }
@@ -49,7 +49,7 @@ namespace PRG2782Project
         {
             try
             {
-                LoginForm login = new LoginForm();
+                frmLogin login = new frmLogin();
                 login.Show();
                 this.Hide();
             }

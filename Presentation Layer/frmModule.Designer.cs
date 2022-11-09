@@ -1,6 +1,6 @@
 ﻿namespace PRG2782Project
 {
-    partial class ModuleForm
+    partial class frmModule
     {
         /// <summary>
         /// Required designer variable.
