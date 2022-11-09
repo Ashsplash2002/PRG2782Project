@@ -37,3 +37,5 @@ C:\Users\Heinrich\source\repos\PRG2782\obj\Debug\PRG2782Project.csproj.CoreCompi
 C:\Users\Heinrich\source\repos\PRG2782\obj\Debug\PRG2782Project.exe
 C:\Users\Heinrich\source\repos\PRG2782\obj\Debug\PRG2782Project.pdb
 C:\Users\Heinrich\source\repos\PRG2782\obj\Debug\PRG2782Project.Presentation_Layer.frmLoginNEW.resources
+C:\Users\Heinrich\source\repos\PRG2782\obj\Debug\PRG2782Project.Presentation_Layer.frmMenuNEW.resources
+C:\Users\Heinrich\source\repos\PRG2782\obj\Debug\PRG2782Project.Presentation_Layer.frmModuleNEW.resources
