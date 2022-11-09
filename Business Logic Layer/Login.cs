@@ -8,17 +8,17 @@ namespace PRG2782Project
 {
     internal class Login
     {
-        private string name, password;
+        private string username, password;
 
         public Login() { }
 
-        public Login(string name, string password)
+        public Login(string username, string password)
         {
-            this.name = name;
+            this.username = username;
             this.password = password;
         }
 
-        public string Name { get => name; set => name = value; }
+        public string Username { get => username; set => username = value; }
         public string Password { get => password; set => password = value; }
     }
 }
