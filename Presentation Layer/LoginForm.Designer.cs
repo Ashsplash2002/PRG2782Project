@@ -34,6 +34,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,9 +51,9 @@
             this.btnlogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnlogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnlogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnlogin.Location = new System.Drawing.Point(207, 238);
+            this.btnlogin.Location = new System.Drawing.Point(91, 237);
             this.btnlogin.Name = "btnlogin";
-            this.btnlogin.Size = new System.Drawing.Size(197, 48);
+            this.btnlogin.Size = new System.Drawing.Size(160, 48);
             this.btnlogin.TabIndex = 2;
             this.btnlogin.Text = "LOGIN";
             this.btnlogin.UseVisualStyleBackColor = false;
@@ -89,6 +91,8 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.btnlogin);
             this.panel1.Controls.Add(this.txtusername);
@@ -98,6 +102,28 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(598, 329);
             this.panel1.TabIndex = 6;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(281, 253);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(38, 24);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "OR";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(354, 237);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(160, 48);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "SIGN UP";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // LoginForm
             // 
@@ -123,6 +149,8 @@
         private System.Windows.Forms.Button btnlogin;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label3;
     }
 }
 
