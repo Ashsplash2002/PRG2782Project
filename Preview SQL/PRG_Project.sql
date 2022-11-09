@@ -1,3 +1,14 @@
+USE master
+GO
+
+
+CREATE DATABASE [PRG2782Project]
+GO
+
+
+USE [PRG2782Project]
+GO
+
 
 -- This creates the modules table
 
@@ -7,6 +18,7 @@ CREATE TABLE modules (
   modDesc varchar(100) NOT NULL,
   link varchar(50) NOT NULL
 )
+GO
 
 
 -- This creates the student table
@@ -22,7 +34,7 @@ CREATE TABLE students (
   address varchar(50) NOT NULL,
   moduleCode bigint(50) NOT NULL
 )
-
+GO
 
 
 -- This adds indexing for modules
@@ -33,7 +45,7 @@ ALTER TABLE modules
   ADD KEY modDesc (modDesc),
   ADD KEY modName (modName),
   ADD KEY id (modCode)
-
+GO
 
 
 -- This adds indexing for students
@@ -49,41 +61,39 @@ ALTER TABLE students
   ADD KEY phoneNum (phoneNum),
   ADD KEY address (address),
   ADD KEY moduleCode (moduleCode)
-
+GO
 
 
 -- This adds auto increment for the primary key in modules table
 
 ALTER TABLE modules
   MODIFY modCode bigint(50) NOT NULL AUTO_INCREMENT
-
+GO
 
 
 -- This adds auto increment for the primary key in students table
 
 ALTER TABLE students
   MODIFY stdNum bigint(50) NOT NULL AUTO_INCREMENT
-
+GO
 
 
 -- This is for the relationship between modules and student tables
 
 ALTER TABLE students
   ADD CONSTRAINT students_ibfk_1 FOREIGN KEY (moduleCode) REFERENCES modules (modCode)
-
-
+GO
 
 
 -- Adds dummy data for modules table
 
-
 INSERT INTO modules(modName, modDesc, link)
 VALUES ('IT','This module will be about general IT information','https://this.isFake.com')
-
+GO
 
 
 -- Adds dummy data for students table
 
 INSERT INTO students(stdName, stdSurname, stdImage, dateObirth, gender, phoneNum, address, moduleCode) 
 VALUES ('Bob','Builder','0x7DEGFAD89FDA13FJBGWPE35E','2022-10-17','M','0811321234','1 Snake Drive','1')
-
+GO
