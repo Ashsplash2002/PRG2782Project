@@ -30,5 +30,28 @@ namespace PRG2782Project.Presentation_Layer
                 MessageBox.Show("Something went wrong: " + ex);
             }
         }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            frmUpdateStudent frm = new frmUpdateStudent();
+            frm.Show();
+            this.Close();
+
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            frmSearchStudent frmSearch = new frmSearchStudent();
+            frmSearch.Show();
+            this.Close();
+
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            frmDeleteStudent delete = new frmDeleteStudent();
+            delete.Show();
+            this.Close();
+        }
     }
 }

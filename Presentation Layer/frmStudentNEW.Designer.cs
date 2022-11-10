@@ -29,11 +29,13 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtstudentsurname = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.txtModuleCodes = new System.Windows.Forms.TextBox();
             this.txtAddress = new System.Windows.Forms.TextBox();
             this.txtPhone = new System.Windows.Forms.TextBox();
-            this.txtGender = new System.Windows.Forms.TextBox();
             this.pbStudentImage = new System.Windows.Forms.PictureBox();
+            this.txtGender = new System.Windows.Forms.TextBox();
             this.txtDOB = new System.Windows.Forms.TextBox();
             this.txtStudentNameandSurname = new System.Windows.Forms.TextBox();
             this.txtStudentNumber = new System.Windows.Forms.TextBox();
@@ -54,8 +56,6 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.btnMenu = new System.Windows.Forms.Button();
-            this.label10 = new System.Windows.Forms.Label();
-            this.txtstudentsurname = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbStudentImage)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -88,7 +88,23 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Student Details";
-            //this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // txtstudentsurname
+            // 
+            this.txtstudentsurname.Location = new System.Drawing.Point(292, 124);
+            this.txtstudentsurname.Name = "txtstudentsurname";
+            this.txtstudentsurname.Size = new System.Drawing.Size(280, 22);
+            this.txtstudentsurname.TabIndex = 22;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(6, 124);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(166, 24);
+            this.label10.TabIndex = 21;
+            this.label10.Text = "Student Surname: ";
             // 
             // txtModuleCodes
             // 
@@ -111,13 +127,6 @@
             this.txtPhone.Size = new System.Drawing.Size(280, 22);
             this.txtPhone.TabIndex = 18;
             // 
-            // txtGender
-            // 
-            this.txtGender.Location = new System.Drawing.Point(292, 282);
-            this.txtGender.Name = "txtGender";
-            this.txtGender.Size = new System.Drawing.Size(280, 22);
-            this.txtGender.TabIndex = 17;
-            // 
             // pbStudentImage
             // 
             this.pbStudentImage.Location = new System.Drawing.Point(292, 153);
@@ -125,6 +134,13 @@
             this.pbStudentImage.Size = new System.Drawing.Size(100, 50);
             this.pbStudentImage.TabIndex = 16;
             this.pbStudentImage.TabStop = false;
+            // 
+            // txtGender
+            // 
+            this.txtGender.Location = new System.Drawing.Point(292, 282);
+            this.txtGender.Name = "txtGender";
+            this.txtGender.Size = new System.Drawing.Size(280, 22);
+            this.txtGender.TabIndex = 17;
             // 
             // txtDOB
             // 
@@ -251,6 +267,7 @@
             this.btnSearch.TabIndex = 4;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // btnCreate
             // 
@@ -273,6 +290,7 @@
             this.btnDelete.TabIndex = 2;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnUpdate
             // 
@@ -284,6 +302,7 @@
             this.btnUpdate.TabIndex = 1;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnseeall
             // 
@@ -328,24 +347,7 @@
             this.btnMenu.UseVisualStyleBackColor = false;
             this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(6, 124);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(166, 24);
-            this.label10.TabIndex = 21;
-            this.label10.Text = "Student Surname: ";
-            // 
-            // txtstudentsurname
-            // 
-            this.txtstudentsurname.Location = new System.Drawing.Point(292, 124);
-            this.txtstudentsurname.Name = "txtstudentsurname";
-            this.txtstudentsurname.Size = new System.Drawing.Size(280, 22);
-            this.txtstudentsurname.TabIndex = 22;
-            // 
-            // StudentForm
+            // frmStudentNEW
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -356,7 +358,8 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Name = "StudentForm";
+            this.Name = "frmStudentNEW";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "StudentForm";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

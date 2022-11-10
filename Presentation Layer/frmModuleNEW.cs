@@ -37,5 +37,26 @@ namespace PRG2782Project.Presentation_Layer
         {
 
         }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            frmSearchModules search = new frmSearchModules();
+            search.Show();
+            this.Close();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            frmDeleteModule delete = new frmDeleteModule(); 
+            delete.Show();
+            this.Close();
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            frmUpdateModule update = new frmUpdateModule();
+            update.Show();
+            this.Close();
+        }
     }
 }
