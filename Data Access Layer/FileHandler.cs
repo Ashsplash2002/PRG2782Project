@@ -50,22 +50,29 @@ namespace PRG2782Project.Data_Access_Layer
                 MessageBox.Show(e.ToString());
             }
 
-            MessageBox.Show("Student Details Captured");
+            MessageBox.Show("Login Details Captured");
+            //catch (DirectoryNotFoundException)
+            //{
+            //    FileStream fileStream = new FileStream(path, FileMode.Create, FileAccess.Write);
+            //}
         }
 
         public List<Login> ReadLogin()
         {
             List<Login> logins = new List<Login>();
+            path = Directory.GetCurrentDirectory();
+            path += @"..\..\..\LoginDetails\LoginDetials.txt";
 
             try
             {
-                FileStream fileStream = new FileStream(path, FileMode.Open, FileAccess.Read);
+                FileStream fileStream = new FileStream(path, FileMode.OpenOrCreate, FileAccess.Read);
                 StreamReader streamReader = new StreamReader(fileStream);
 
                 string fileData = string.Empty;
                 while ((fileData = streamReader.ReadLine()) != null)
                 {
-                    logins.Add(new Login((fileData.Split(';'))[0], (fileData.Split(';'))[1]));
+                    string decoded = Base64Decode($"{fileData}");
+                    logins.Add(new Login((decoded.Split(';'))[0], (decoded.Split(';'))[1]));
                 }
 
                 streamReader.Close();

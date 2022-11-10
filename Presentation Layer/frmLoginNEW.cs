@@ -18,16 +18,39 @@ namespace PRG2782Project.Presentation_Layer
             InitializeComponent();
         }
 
-        FileHandler logins = new FileHandler();
+        FileHandler loginsData = new FileHandler();
         List<Login> loginsList = new List<Login>();
+
 
         private void btnlogin_Click(object sender, EventArgs e)
         {
+            bool valid = false;
             try
             {
-                frmMenuNEW menu = new frmMenuNEW();
-                menu.Show();
-                this.Hide();
+                string username = txtusername.Text; string password = txtPassword.Text;
+
+                loginsList = loginsData.ReadLogin();
+
+                foreach (Login login in loginsList)
+                {
+                    if ((username == login.Username) && (password == login.Password))
+                    {
+                        valid = true;
+                    }
+                }
+
+                if (valid)
+                {
+                    frmMenuNEW menu = new frmMenuNEW();
+                    menu.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Invalid Username or Password");
+                    txtusername.Clear();
+                    txtPassword.Clear();
+                }
             }
             catch (Exception ex)
             {
@@ -39,8 +62,7 @@ namespace PRG2782Project.Presentation_Layer
         {
             try
             {
-                logins.WriteLogin(new Login(txtusername.Text, txtPassword.Text));
-                this.Hide();
+                loginsData.WriteLogin(new Login(txtusername.Text, txtPassword.Text));
             }
             catch (Exception ex)
             {
