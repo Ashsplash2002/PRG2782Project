@@ -59,3 +59,10 @@ C:\Users\matth\OneDrive\Documents\clone\obj\Debug\PRG2782Project.csproj.Generate
 C:\Users\matth\OneDrive\Documents\clone\obj\Debug\PRG2782Project.csproj.CoreCompileInputs.cache
 C:\Users\matth\OneDrive\Documents\clone\obj\Debug\PRG2782Project.exe
 C:\Users\matth\OneDrive\Documents\clone\obj\Debug\PRG2782Project.pdb
+C:\Users\Heinrich\source\repos\PRG2782\obj\Debug\PRG2782Project.frmDeleteModule.resources
+C:\Users\Heinrich\source\repos\PRG2782\obj\Debug\PRG2782Project.frmDeleteStudent.resources
+C:\Users\Heinrich\source\repos\PRG2782\obj\Debug\PRG2782Project.frmSearchModules.resources
+C:\Users\Heinrich\source\repos\PRG2782\obj\Debug\PRG2782Project.frmSearchStudent.resources
+C:\Users\Heinrich\source\repos\PRG2782\obj\Debug\PRG2782Project.frmUpdateModule.resources
+C:\Users\Heinrich\source\repos\PRG2782\obj\Debug\PRG2782Project.frmUpdateStudent.resources
+C:\Users\Heinrich\source\repos\PRG2782\obj\Debug\PRG2782Project.Presentation_Layer.frmStudentNEW.resources
