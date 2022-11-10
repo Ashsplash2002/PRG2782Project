@@ -10,10 +10,9 @@ namespace PRG2782Project.Data_Access_Layer
 {
     internal class FileHandler
     {
-        string path = Directory.GetCurrentDirectory(); 
-
         public void WriteLogin(Login login)
         {
+            string path = Directory.GetCurrentDirectory();
             path += @"..\..\..\LoginDetails\LoginDetials.txt";
 
             try
