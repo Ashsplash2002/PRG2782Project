@@ -28,9 +28,9 @@ namespace PRG2782Project
 
 
         //shouldn't these go in file handler class? There are 6 here.
-        public void WriteStudent(string studentNumber, string studentName, string studentSurname,string studentImage,string studentGender,string studentPhone,string studentAddress,string moduleCodes, DateTime studentDOB)
+        public void WriteStudent(string studentNumber, string studentName, string studentSurname, string studentImage, string studentGender, string studentPhone, string studentAddress, string moduleCodes, DateTime studentDOB)
         {
-            string queryinsert = @"Insert into students  Values('" + studentNumber + "','" + studentName + "','" + studentSurname + "','" + studentImage + "','" + studentGender + 
+            string queryinsert = @"Insert into students  Values('" + studentNumber + "','" + studentName + "','" + studentSurname + "','" + studentImage + "','" + studentGender +
                 "','" + studentPhone + "','" + studentAddress + "','" + moduleCodes + "','" + studentDOB + "')";
             conn = new SqlConnection(connect);
             conn.Open();
@@ -57,7 +57,7 @@ namespace PRG2782Project
 
 
 
-        public void WriteModule(string moduleCode,string moduleName,string moduleDescription, string moduleLink)
+        public void WriteModule(string moduleCode, string moduleName, string moduleDescription, string moduleLink)
         {
             string queryinsert = @"Insert into modules Values('" + moduleCode + "','" + moduleName + "','" + moduleDescription + "','" + moduleLink + "')";
             conn = new SqlConnection(connect);
@@ -85,7 +85,7 @@ namespace PRG2782Project
 
 
 
-        
+
 
         //4 DataHandler Methods Added:
         public void studentDelete(string studentID)
@@ -110,28 +110,29 @@ namespace PRG2782Project
 
         }
 
-        public void studentSearch()
+        public void studentSearch(string studentID)
         {
-            //uses console at the moment; can change later
-
             SqlDataReader rdr = null;
+
+            string querySearch = @"Select * from students Where id=('" + studentID + "')";
 
             conn.Open();
 
-            //input Sql commmand here:
-            SqlCommand cmd = new SqlCommand("", conn);
+            SqlCommand cmd = new SqlCommand(querySearch, conn);
 
-            rdr = cmd.ExecuteReader();
-
-            while (rdr.Read())
+            try
             {
-                //it stores it's information in index format.
-                Console.WriteLine(rdr[1] + " " + rdr[2]);
+                rdr = cmd.ExecuteReader();
+                MessageBox.Show("Search successful");
             }
-
-            conn.Close();
-
-            Console.ReadLine();
+            catch (Exception)
+            {
+                MessageBox.Show("Search failed");
+            }
+            finally
+            {
+                conn.Close();
+            }
         }
 
         public void moduleDelete(string moduleID)
@@ -155,7 +156,28 @@ namespace PRG2782Project
             }
         }
 
-        public void studentUpdate()
+        public void studentUpdate(string studentID, string studentName, string studentSurname, string studentDOB, string studentGender, string studentPhone, string studentAddress, string moduleCode)
+        {
+            string queryUpdate = @"Update students Set stdName = @studentName, stdSurname = @studentSurname " + "Where id = @studentID";
+            conn = new SqlConnection(connect);
+            conn.Open();
+            cmd = new SqlCommand(queryUpdate, conn);
+
+            try
+            {
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Student name updated successfully");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Student name not updated");
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+        public void moduleUpdate()
         {
 
         }
