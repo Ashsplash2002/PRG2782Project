@@ -2,14 +2,14 @@ USE master
 GO
 
 
-CREATE DATABASE [PRG2782Project17]
+CREATE DATABASE [PRG2782Project]
 GO
 
 
 USE [PRG2782Project]
 GO
 
-USE PRG2782Project17
+USE PRG2782Project
 GO
 
 -- This creates the modules table
