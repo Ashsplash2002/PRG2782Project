@@ -24,5 +24,10 @@ namespace PRG2782Project
             module.Show();
             this.Close();
         }
+
+        private void frmDeleteModule_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

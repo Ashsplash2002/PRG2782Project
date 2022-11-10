@@ -34,13 +34,16 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.dgvDelete = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDelete)).BeginInit();
             this.SuspendLayout();
             // 
             // btnback
             // 
             this.btnback.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnback.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnback.Location = new System.Drawing.Point(316, 157);
+            this.btnback.Location = new System.Drawing.Point(436, 318);
             this.btnback.Name = "btnback";
             this.btnback.Size = new System.Drawing.Size(149, 33);
             this.btnback.TabIndex = 34;
@@ -52,7 +55,7 @@
             // 
             this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelete.Location = new System.Drawing.Point(31, 157);
+            this.btnDelete.Location = new System.Drawing.Point(31, 318);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(94, 33);
             this.btnDelete.TabIndex = 33;
@@ -95,12 +98,35 @@
             this.label2.TabIndex = 29;
             this.label2.Text = "Enter Module Code: ";
             // 
+            // btnSearch
+            // 
+            this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearch.Location = new System.Drawing.Point(491, 89);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(94, 33);
+            this.btnSearch.TabIndex = 35;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseVisualStyleBackColor = false;
+            // 
+            // dgvDelete
+            // 
+            this.dgvDelete.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDelete.Location = new System.Drawing.Point(31, 142);
+            this.dgvDelete.Name = "dgvDelete";
+            this.dgvDelete.RowHeadersWidth = 51;
+            this.dgvDelete.RowTemplate.Height = 24;
+            this.dgvDelete.Size = new System.Drawing.Size(554, 150);
+            this.dgvDelete.TabIndex = 36;
+            // 
             // frmDeleteStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(503, 221);
+            this.ClientSize = new System.Drawing.Size(615, 387);
+            this.Controls.Add(this.dgvDelete);
+            this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.btnback);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.txtStudentCode);
@@ -110,6 +136,7 @@
             this.Name = "frmDeleteStudent";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmDeleteStudent";
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDelete)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -123,5 +150,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.DataGridView dgvDelete;
     }
 }
