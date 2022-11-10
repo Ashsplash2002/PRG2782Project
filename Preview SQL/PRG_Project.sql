@@ -2,19 +2,21 @@ USE master
 GO
 
 
-CREATE DATABASE [PRG2782Project]
+CREATE DATABASE [PRG2782Project17]
 GO
 
 
 USE [PRG2782Project]
 GO
 
+USE PRG2782Project17
+GO
 
 -- This creates the modules table
 
 CREATE TABLE modules (
-  modCode bigint(50) NOT NULL,
-  modName bigint(50) NOT NULL,
+  modCode bigint NOT NULL IDENTITY(1, 1),
+  modName varchar(50) NOT NULL,
   modDesc varchar(100) NOT NULL,
   link varchar(50) NOT NULL
 )
@@ -24,7 +26,7 @@ GO
 -- This creates the student table
 
 CREATE TABLE students (
-  stdNum bigint(50) NOT NULL,
+  stdNum bigint NOT NULL IDENTITY(1, 1),
   stdName varchar(50) NOT NULL,
   stdSurname varchar(50) NOT NULL,
   stdImage varbinary(100) NOT NULL,
@@ -32,50 +34,27 @@ CREATE TABLE students (
   gender varchar(50) NOT NULL,
   phoneNum varchar(50) NOT NULL,
   address varchar(50) NOT NULL,
-  moduleCode bigint(50) NOT NULL
+  moduleCode bigint NOT NULL
 )
 GO
-
 
 -- This adds indexing for modules
 
 ALTER TABLE modules
-  ADD PRIMARY KEY (modCode),
-  ADD KEY link (link),
-  ADD KEY modDesc (modDesc),
-  ADD KEY modName (modName),
-  ADD KEY id (modCode)
+  ADD PRIMARY KEY (modCode)
 GO
 
 
 -- This adds indexing for students
 
 ALTER TABLE students
-  ADD PRIMARY KEY (stdNum),
-  ADD KEY id (stdNum),
-  ADD KEY stdName (stdName),
-  ADD KEY stdSurname (stdSurname),
-  ADD KEY stdImage (stdImage),
-  ADD KEY dateObirth (dateObirth),
-  ADD KEY gender (gender),
-  ADD KEY phoneNum (phoneNum),
-  ADD KEY address (address),
-  ADD KEY moduleCode (moduleCode)
+  ADD PRIMARY KEY (stdNum)
 GO
 
 
--- This adds auto increment for the primary key in modules table
-
-ALTER TABLE modules
-  MODIFY modCode bigint(50) NOT NULL AUTO_INCREMENT
-GO
 
 
--- This adds auto increment for the primary key in students table
 
-ALTER TABLE students
-  MODIFY stdNum bigint(50) NOT NULL AUTO_INCREMENT
-GO
 
 
 -- This is for the relationship between modules and student tables
@@ -95,5 +74,5 @@ GO
 -- Adds dummy data for students table
 
 INSERT INTO students(stdName, stdSurname, stdImage, dateObirth, gender, phoneNum, address, moduleCode) 
-VALUES ('Bob','Builder','0x7DEGFAD89FDA13FJBGWPE35E','2022-10-17','M','0811321234','1 Snake Drive','1')
+VALUES ('Bob','Builder',CAST('test' AS VARBINARY(MAX)),'2022-10-17','M','0811321234','1 Snake Drive','1')
 GO
