@@ -11,6 +11,10 @@ namespace PRG2782Project
         private string studentNumber, studentName, studentSurname, studentImage, studentGender, studentPhone, studentAddress, moduleCodes;
         private DateTime studentDOB;
 
+        public Student()
+        {
+
+        }
         public Student(string studentNumber, string studentName, string studentSurname, string studentImage, string studentGender, string studentPhone, string studentAddress, string moduleCodes, DateTime studentDOB)
         {
             this.StudentNumber = studentNumber;

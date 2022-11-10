@@ -12,7 +12,7 @@ GO
 -- This creates the modules table
 
 CREATE TABLE modules (
-  modCode bigint NOT NULL IDENTITY(1, 1),
+  modCode varchar(7) NOT NULL IDENTITY(1, 1),
   modName varchar(50) NOT NULL,
   modDesc varchar(100) NOT NULL,
   link varchar(50) NOT NULL
@@ -31,7 +31,7 @@ CREATE TABLE students (
   gender varchar(50) NOT NULL,
   phoneNum varchar(50) NOT NULL,
   address varchar(50) NOT NULL,
-  moduleCode bigint NOT NULL
+  moduleCode varchar(7) NOT NULL
 )
 GO
 
