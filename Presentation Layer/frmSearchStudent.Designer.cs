@@ -46,7 +46,7 @@
             this.btnback.Name = "btnback";
             this.btnback.Size = new System.Drawing.Size(149, 33);
             this.btnback.TabIndex = 28;
-            this.btnback.Text = "Back to Module Form";
+            this.btnback.Text = "Back to Student Form";
             this.btnback.UseVisualStyleBackColor = false;
             this.btnback.Click += new System.EventHandler(this.btnback_Click);
             // 
