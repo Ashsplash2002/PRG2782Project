@@ -6,9 +6,6 @@ CREATE DATABASE [PRG2782Project]
 GO
 
 
-USE [PRG2782Project]
-GO
-
 USE PRG2782Project
 GO
 
