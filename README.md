@@ -11,7 +11,7 @@ Our group has been tasked with a project that needs to be able to do the followi
 ## Project Creators and their contributions 
 ### Ashle Paige Olivier 
 Student Number: 578325<br>
-Job Description for Project: GUI creator and ReadMe document creator 
+Job Description for Project: GUI creator, ReadMe document creator, and DataHandler creator 
 
 ### Heinrich Niehaus
 Student Number: 578246<br>
@@ -19,7 +19,7 @@ Job Description: Linking the GUI to the database by coding CRUD operations
 
 ### Tiaan Tobias van Schalkwyk
 Student Number: 578552<br>
-Job Description: Database creator
+Job Description: Database creator aand FileHandler creator 
 
 ### Cameron Wood
 Student Number: 577098<br>
