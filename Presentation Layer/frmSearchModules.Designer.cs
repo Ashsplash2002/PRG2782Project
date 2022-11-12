@@ -31,11 +31,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.dgvSearch = new System.Windows.Forms.DataGridView();
+            this.dgvSearchModules = new System.Windows.Forms.DataGridView();
             this.txtModuleCode = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.btnback = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSearch)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSearchModules)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -70,16 +70,16 @@
             this.label6.TabIndex = 18;
             this.label6.Text = "Search A Specific Module";
             // 
-            // dgvSearch
+            // dgvSearchModules
             // 
-            this.dgvSearch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSearch.Location = new System.Drawing.Point(43, 102);
-            this.dgvSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.dgvSearch.Name = "dgvSearch";
-            this.dgvSearch.RowHeadersWidth = 51;
-            this.dgvSearch.RowTemplate.Height = 24;
-            this.dgvSearch.Size = new System.Drawing.Size(326, 167);
-            this.dgvSearch.TabIndex = 17;
+            this.dgvSearchModules.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSearchModules.Location = new System.Drawing.Point(43, 102);
+            this.dgvSearchModules.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvSearchModules.Name = "dgvSearchModules";
+            this.dgvSearchModules.RowHeadersWidth = 51;
+            this.dgvSearchModules.RowTemplate.Height = 24;
+            this.dgvSearchModules.Size = new System.Drawing.Size(326, 167);
+            this.dgvSearchModules.TabIndex = 17;
             // 
             // txtModuleCode
             // 
@@ -123,7 +123,7 @@
             this.Controls.Add(this.btnback);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtModuleCode);
-            this.Controls.Add(this.dgvSearch);
+            this.Controls.Add(this.dgvSearchModules);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
@@ -132,7 +132,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmSearchModules";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmSearchModules_FormClosed);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSearch)).EndInit();
+            this.Load += new System.EventHandler(this.frmSearchModules_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSearchModules)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -142,7 +143,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DataGridView dgvSearch;
+        private System.Windows.Forms.DataGridView dgvSearchModules;
         private System.Windows.Forms.TextBox txtModuleCode;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Button btnback;

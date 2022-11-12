@@ -29,5 +29,17 @@ namespace PRG2782Project
         {
             Environment.Exit(0);
         }
+
+        private void frmSearchModules_Load(object sender, EventArgs e)
+        {
+            Refresh();
+        }
+
+
+        private void Refresh(List<Module> modules)
+        {
+            dgvSearchModules.DataSource = modules;
+            dgvSearchModules.Refresh();
+        }
     }
 }

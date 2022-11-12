@@ -33,7 +33,7 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnseeall = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvModules = new System.Windows.Forms.DataGridView();
             this.txtModuleCode = new System.Windows.Forms.TextBox();
             this.btnCreate = new System.Windows.Forms.Button();
             this.btnMenu = new System.Windows.Forms.Button();
@@ -46,7 +46,7 @@
             this.btnSearch = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtModuleDescription = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvModules)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -105,16 +105,16 @@
             this.btnseeall.Text = "See All";
             this.btnseeall.UseVisualStyleBackColor = false;
             // 
-            // dataGridView1
+            // dgvModules
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(484, 44);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(527, 167);
-            this.dataGridView1.TabIndex = 8;
+            this.dgvModules.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvModules.Location = new System.Drawing.Point(484, 44);
+            this.dgvModules.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvModules.Name = "dgvModules";
+            this.dgvModules.RowHeadersWidth = 51;
+            this.dgvModules.RowTemplate.Height = 24;
+            this.dgvModules.Size = new System.Drawing.Size(527, 167);
+            this.dgvModules.TabIndex = 8;
             // 
             // txtModuleCode
             // 
@@ -267,7 +267,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(1020, 306);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvModules);
             this.Controls.Add(this.btnMenu);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox2);
@@ -277,7 +277,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ModuleForm";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmModuleNEW_FormClosed);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.frmModuleNEW_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvModules)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -292,7 +293,7 @@
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnseeall;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvModules;
         private System.Windows.Forms.TextBox txtModuleCode;
         private System.Windows.Forms.Button btnCreate;
         private System.Windows.Forms.Button btnMenu;

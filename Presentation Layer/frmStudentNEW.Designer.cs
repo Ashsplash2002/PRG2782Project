@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtstudentsurname = new System.Windows.Forms.TextBox();
+            this.txtStudentSurname = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txtModuleCodes = new System.Windows.Forms.TextBox();
             this.txtAddress = new System.Windows.Forms.TextBox();
@@ -37,7 +37,7 @@
             this.pbStudentImage = new System.Windows.Forms.PictureBox();
             this.txtGender = new System.Windows.Forms.TextBox();
             this.txtDOB = new System.Windows.Forms.TextBox();
-            this.txtStudentNameandSurname = new System.Windows.Forms.TextBox();
+            this.txtStudentName = new System.Windows.Forms.TextBox();
             this.txtStudentNumber = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -53,18 +53,18 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnseeall = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvStudents = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.btnMenu = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbStudentImage)).BeginInit();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStudents)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.txtstudentsurname);
+            this.groupBox1.Controls.Add(this.txtStudentSurname);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.txtModuleCodes);
             this.groupBox1.Controls.Add(this.txtAddress);
@@ -72,7 +72,7 @@
             this.groupBox1.Controls.Add(this.pbStudentImage);
             this.groupBox1.Controls.Add(this.txtGender);
             this.groupBox1.Controls.Add(this.txtDOB);
-            this.groupBox1.Controls.Add(this.txtStudentNameandSurname);
+            this.groupBox1.Controls.Add(this.txtStudentName);
             this.groupBox1.Controls.Add(this.txtStudentNumber);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label8);
@@ -91,13 +91,13 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Student Details";
             // 
-            // txtstudentsurname
+            // txtStudentSurname
             // 
-            this.txtstudentsurname.Location = new System.Drawing.Point(219, 101);
-            this.txtstudentsurname.Margin = new System.Windows.Forms.Padding(2);
-            this.txtstudentsurname.Name = "txtstudentsurname";
-            this.txtstudentsurname.Size = new System.Drawing.Size(211, 20);
-            this.txtstudentsurname.TabIndex = 2;
+            this.txtStudentSurname.Location = new System.Drawing.Point(219, 101);
+            this.txtStudentSurname.Margin = new System.Windows.Forms.Padding(2);
+            this.txtStudentSurname.Name = "txtStudentSurname";
+            this.txtStudentSurname.Size = new System.Drawing.Size(211, 20);
+            this.txtStudentSurname.TabIndex = 2;
             // 
             // label10
             // 
@@ -159,13 +159,13 @@
             this.txtDOB.Size = new System.Drawing.Size(211, 20);
             this.txtDOB.TabIndex = 3;
             // 
-            // txtStudentNameandSurname
+            // txtStudentName
             // 
-            this.txtStudentNameandSurname.Location = new System.Drawing.Point(219, 58);
-            this.txtStudentNameandSurname.Margin = new System.Windows.Forms.Padding(2);
-            this.txtStudentNameandSurname.Name = "txtStudentNameandSurname";
-            this.txtStudentNameandSurname.Size = new System.Drawing.Size(211, 20);
-            this.txtStudentNameandSurname.TabIndex = 1;
+            this.txtStudentName.Location = new System.Drawing.Point(219, 58);
+            this.txtStudentName.Margin = new System.Windows.Forms.Padding(2);
+            this.txtStudentName.Name = "txtStudentName";
+            this.txtStudentName.Size = new System.Drawing.Size(211, 20);
+            this.txtStudentName.TabIndex = 1;
             // 
             // txtStudentNumber
             // 
@@ -303,6 +303,7 @@
             this.btnCreate.TabIndex = 0;
             this.btnCreate.Text = "Create";
             this.btnCreate.UseVisualStyleBackColor = false;
+            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
             // btnDelete
             // 
@@ -342,16 +343,16 @@
             this.btnseeall.Text = "See All";
             this.btnseeall.UseVisualStyleBackColor = false;
             // 
-            // dataGridView1
+            // dgvStudents
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(487, 55);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(527, 252);
-            this.dataGridView1.TabIndex = 2;
+            this.dgvStudents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvStudents.Location = new System.Drawing.Point(487, 55);
+            this.dgvStudents.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvStudents.Name = "dgvStudents";
+            this.dgvStudents.RowHeadersWidth = 51;
+            this.dgvStudents.RowTemplate.Height = 24;
+            this.dgvStudents.Size = new System.Drawing.Size(527, 252);
+            this.dgvStudents.TabIndex = 2;
             // 
             // label1
             // 
@@ -385,7 +386,7 @@
             this.ClientSize = new System.Drawing.Size(1028, 529);
             this.Controls.Add(this.btnMenu);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvStudents);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -393,11 +394,12 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "StudentForm";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmStudentNEW_FormClosed);
+            this.Load += new System.EventHandler(this.frmStudentNEW_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbStudentImage)).EndInit();
             this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStudents)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -407,7 +409,7 @@
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvStudents;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
@@ -423,7 +425,7 @@
         private System.Windows.Forms.TextBox txtGender;
         private System.Windows.Forms.PictureBox pbStudentImage;
         private System.Windows.Forms.TextBox txtDOB;
-        private System.Windows.Forms.TextBox txtStudentNameandSurname;
+        private System.Windows.Forms.TextBox txtStudentName;
         private System.Windows.Forms.TextBox txtStudentNumber;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Button btnCreate;
@@ -431,7 +433,7 @@
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnseeall;
         private System.Windows.Forms.Button btnMenu;
-        private System.Windows.Forms.TextBox txtstudentsurname;
+        private System.Windows.Forms.TextBox txtStudentSurname;
         private System.Windows.Forms.Label label10;
     }
 }

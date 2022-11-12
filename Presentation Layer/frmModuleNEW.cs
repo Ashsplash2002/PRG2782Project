@@ -17,6 +17,8 @@ namespace PRG2782Project.Presentation_Layer
             InitializeComponent();
         }
 
+        DataHandler data = new DataHandler();
+        List<Module> modules = new List<Module>();
 
 
         private void btnMenu_Click(object sender, EventArgs e)
@@ -35,7 +37,13 @@ namespace PRG2782Project.Presentation_Layer
 
         private void btnCreate_Click(object sender, EventArgs e)
         {
+            string moduleCode = txtModuleCode.Text;
+            string moduleName = txtModuleName.Text;
+            string moduleDescription = txtModuleDescription.Text;
+            string moduleLink = txtLinks.Text;
+            data.CreateModule(moduleCode, moduleName, moduleDescription, moduleLink);
 
+            Refresh(modules);
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -62,6 +70,19 @@ namespace PRG2782Project.Presentation_Layer
         private void frmModuleNEW_FormClosed(object sender, FormClosedEventArgs e)
         {
             Environment.Exit(0);
+        }
+
+        private void frmModuleNEW_Load(object sender, EventArgs e)
+        {
+            Refresh(modules);
+        }
+
+
+        private void Refresh(List<Module> modules)
+        {
+            modules = data.ReadModule();
+            dgvModules.DataSource = modules;
+            dgvModules.Refresh();
         }
     }
 }
