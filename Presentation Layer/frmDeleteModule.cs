@@ -29,5 +29,10 @@ namespace PRG2782Project
         {
 
         }
+
+        private void frmDeleteModule_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Environment.Exit(0);
+        }
     }
 }

@@ -83,9 +83,9 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(9, 10);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(449, 423);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
@@ -94,7 +94,7 @@
             // txtstudentsurname
             // 
             this.txtstudentsurname.Location = new System.Drawing.Point(219, 101);
-            this.txtstudentsurname.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtstudentsurname.Margin = new System.Windows.Forms.Padding(2);
             this.txtstudentsurname.Name = "txtstudentsurname";
             this.txtstudentsurname.Size = new System.Drawing.Size(211, 20);
             this.txtstudentsurname.TabIndex = 2;
@@ -113,7 +113,7 @@
             // txtModuleCodes
             // 
             this.txtModuleCodes.Location = new System.Drawing.Point(219, 370);
-            this.txtModuleCodes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtModuleCodes.Margin = new System.Windows.Forms.Padding(2);
             this.txtModuleCodes.Name = "txtModuleCodes";
             this.txtModuleCodes.Size = new System.Drawing.Size(211, 20);
             this.txtModuleCodes.TabIndex = 7;
@@ -121,7 +121,7 @@
             // txtAddress
             // 
             this.txtAddress.Location = new System.Drawing.Point(219, 323);
-            this.txtAddress.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtAddress.Margin = new System.Windows.Forms.Padding(2);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(211, 20);
             this.txtAddress.TabIndex = 6;
@@ -129,7 +129,7 @@
             // txtPhone
             // 
             this.txtPhone.Location = new System.Drawing.Point(219, 278);
-            this.txtPhone.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPhone.Margin = new System.Windows.Forms.Padding(2);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(211, 20);
             this.txtPhone.TabIndex = 5;
@@ -137,7 +137,7 @@
             // pbStudentImage
             // 
             this.pbStudentImage.Location = new System.Drawing.Point(219, 124);
-            this.pbStudentImage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pbStudentImage.Margin = new System.Windows.Forms.Padding(2);
             this.pbStudentImage.Name = "pbStudentImage";
             this.pbStudentImage.Size = new System.Drawing.Size(75, 41);
             this.pbStudentImage.TabIndex = 16;
@@ -146,7 +146,7 @@
             // txtGender
             // 
             this.txtGender.Location = new System.Drawing.Point(219, 229);
-            this.txtGender.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtGender.Margin = new System.Windows.Forms.Padding(2);
             this.txtGender.Name = "txtGender";
             this.txtGender.Size = new System.Drawing.Size(211, 20);
             this.txtGender.TabIndex = 4;
@@ -154,7 +154,7 @@
             // txtDOB
             // 
             this.txtDOB.Location = new System.Drawing.Point(219, 187);
-            this.txtDOB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDOB.Margin = new System.Windows.Forms.Padding(2);
             this.txtDOB.Name = "txtDOB";
             this.txtDOB.Size = new System.Drawing.Size(211, 20);
             this.txtDOB.TabIndex = 3;
@@ -162,7 +162,7 @@
             // txtStudentNameandSurname
             // 
             this.txtStudentNameandSurname.Location = new System.Drawing.Point(219, 58);
-            this.txtStudentNameandSurname.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtStudentNameandSurname.Margin = new System.Windows.Forms.Padding(2);
             this.txtStudentNameandSurname.Name = "txtStudentNameandSurname";
             this.txtStudentNameandSurname.Size = new System.Drawing.Size(211, 20);
             this.txtStudentNameandSurname.TabIndex = 1;
@@ -170,7 +170,7 @@
             // txtStudentNumber
             // 
             this.txtStudentNumber.Location = new System.Drawing.Point(219, 24);
-            this.txtStudentNumber.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtStudentNumber.Margin = new System.Windows.Forms.Padding(2);
             this.txtStudentNumber.Name = "txtStudentNumber";
             this.txtStudentNumber.Size = new System.Drawing.Size(211, 20);
             this.txtStudentNumber.TabIndex = 0;
@@ -271,9 +271,9 @@
             this.groupBox2.Controls.Add(this.btnUpdate);
             this.groupBox2.Controls.Add(this.btnseeall);
             this.groupBox2.Location = new System.Drawing.Point(9, 438);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(448, 81);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
@@ -284,7 +284,7 @@
             this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearch.Location = new System.Drawing.Point(174, 27);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(2);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(92, 36);
             this.btnSearch.TabIndex = 2;
@@ -297,7 +297,7 @@
             this.btnCreate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCreate.Location = new System.Drawing.Point(4, 27);
-            this.btnCreate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCreate.Margin = new System.Windows.Forms.Padding(2);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(82, 36);
             this.btnCreate.TabIndex = 0;
@@ -309,7 +309,7 @@
             this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.Location = new System.Drawing.Point(362, 27);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(80, 36);
             this.btnDelete.TabIndex = 4;
@@ -322,7 +322,7 @@
             this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdate.Location = new System.Drawing.Point(92, 27);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(2);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(78, 36);
             this.btnUpdate.TabIndex = 1;
@@ -335,7 +335,7 @@
             this.btnseeall.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnseeall.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnseeall.Location = new System.Drawing.Point(270, 27);
-            this.btnseeall.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnseeall.Margin = new System.Windows.Forms.Padding(2);
             this.btnseeall.Name = "btnseeall";
             this.btnseeall.Size = new System.Drawing.Size(88, 36);
             this.btnseeall.TabIndex = 3;
@@ -346,7 +346,7 @@
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(487, 55);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
@@ -369,7 +369,7 @@
             this.btnMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMenu.Location = new System.Drawing.Point(487, 465);
-            this.btnMenu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnMenu.Margin = new System.Windows.Forms.Padding(2);
             this.btnMenu.Name = "btnMenu";
             this.btnMenu.Size = new System.Drawing.Size(195, 36);
             this.btnMenu.TabIndex = 2;
@@ -388,10 +388,11 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmStudentNEW";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "StudentForm";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmStudentNEW_FormClosed);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbStudentImage)).EndInit();

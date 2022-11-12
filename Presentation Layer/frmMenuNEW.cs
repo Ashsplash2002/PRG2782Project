@@ -71,5 +71,10 @@ namespace PRG2782Project.Presentation_Layer
                 MessageBox.Show("Something went wrong: " + ex);
             }
         }
+
+        private void frmMenuNEW_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Environment.Exit(0);
+        }
     }
 }

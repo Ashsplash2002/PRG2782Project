@@ -43,9 +43,10 @@
             // 
             this.btnback.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnback.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnback.Location = new System.Drawing.Point(436, 312);
+            this.btnback.Location = new System.Drawing.Point(327, 254);
+            this.btnback.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnback.Name = "btnback";
-            this.btnback.Size = new System.Drawing.Size(149, 33);
+            this.btnback.Size = new System.Drawing.Size(112, 27);
             this.btnback.TabIndex = 28;
             this.btnback.Text = "Back to Module Form";
             this.btnback.UseVisualStyleBackColor = false;
@@ -55,27 +56,30 @@
             // 
             this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelete.Location = new System.Drawing.Point(28, 300);
+            this.btnDelete.Location = new System.Drawing.Point(21, 244);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(94, 33);
+            this.btnDelete.Size = new System.Drawing.Size(70, 27);
             this.btnDelete.TabIndex = 27;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
             // 
             // txtModuleCode
             // 
-            this.txtModuleCode.Location = new System.Drawing.Point(215, 91);
+            this.txtModuleCode.Location = new System.Drawing.Point(161, 74);
+            this.txtModuleCode.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtModuleCode.Name = "txtModuleCode";
-            this.txtModuleCode.Size = new System.Drawing.Size(247, 22);
+            this.txtModuleCode.Size = new System.Drawing.Size(186, 20);
             this.txtModuleCode.TabIndex = 26;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(101, 28);
+            this.label6.Location = new System.Drawing.Point(76, 23);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(422, 39);
+            this.label6.Size = new System.Drawing.Size(340, 31);
             this.label6.TabIndex = 25;
             this.label6.Text = "Delete A Specific Module";
             // 
@@ -83,18 +87,20 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label1.Location = new System.Drawing.Point(335, 35);
+            this.label1.Location = new System.Drawing.Point(251, 28);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 29);
+            this.label1.Size = new System.Drawing.Size(0, 25);
             this.label1.TabIndex = 24;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(24, 89);
+            this.label2.Location = new System.Drawing.Point(18, 72);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(185, 24);
+            this.label2.Size = new System.Drawing.Size(144, 18);
             this.label2.TabIndex = 22;
             this.label2.Text = "Enter Module Code: ";
             // 
@@ -102,9 +108,10 @@
             // 
             this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.Location = new System.Drawing.Point(491, 89);
+            this.btnSearch.Location = new System.Drawing.Point(368, 72);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(94, 33);
+            this.btnSearch.Size = new System.Drawing.Size(70, 27);
             this.btnSearch.TabIndex = 29;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = false;
@@ -112,19 +119,20 @@
             // dgvdelete
             // 
             this.dgvdelete.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvdelete.Location = new System.Drawing.Point(28, 135);
+            this.dgvdelete.Location = new System.Drawing.Point(21, 110);
+            this.dgvdelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvdelete.Name = "dgvdelete";
             this.dgvdelete.RowHeadersWidth = 51;
             this.dgvdelete.RowTemplate.Height = 24;
-            this.dgvdelete.Size = new System.Drawing.Size(557, 150);
+            this.dgvdelete.Size = new System.Drawing.Size(418, 122);
             this.dgvdelete.TabIndex = 30;
             // 
             // frmDeleteModule
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(620, 365);
+            this.ClientSize = new System.Drawing.Size(465, 297);
             this.Controls.Add(this.dgvdelete);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.btnback);
@@ -133,9 +141,11 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmDeleteModule";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmDeleteModule";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmDeleteModule_FormClosed);
             this.Load += new System.EventHandler(this.frmDeleteModule_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvdelete)).EndInit();
             this.ResumeLayout(false);

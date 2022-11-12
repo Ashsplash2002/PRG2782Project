@@ -53,5 +53,10 @@ namespace PRG2782Project.Presentation_Layer
             delete.Show();
             this.Close();
         }
+
+        private void frmStudentNEW_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Environment.Exit(0);
+        }
     }
 }

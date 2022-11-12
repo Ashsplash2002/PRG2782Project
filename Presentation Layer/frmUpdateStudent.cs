@@ -24,5 +24,10 @@ namespace PRG2782Project
             student.Show();
             this.Close();
         }
+
+        private void frmUpdateStudent_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Environment.Exit(0);
+        }
     }
 }

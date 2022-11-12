@@ -58,5 +58,10 @@ namespace PRG2782Project.Presentation_Layer
             update.Show();
             this.Close();
         }
+
+        private void frmModuleNEW_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Environment.Exit(0);
+        }
     }
 }

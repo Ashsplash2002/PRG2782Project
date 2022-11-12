@@ -24,5 +24,10 @@ namespace PRG2782Project
             module.Show();
             this.Close();
         }
+
+        private void frmSearchModules_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Environment.Exit(0);
+        }
     }
 }
