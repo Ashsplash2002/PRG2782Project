@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PRG2782Project
 {
-    public partial class StudentForm : Form
+    public partial class frmStudent : Form
     {
-        public StudentForm()
+        public frmStudent()
         {
             InitializeComponent();
         }
@@ -24,9 +24,17 @@ namespace PRG2782Project
 
         private void btnMenu_Click(object sender, EventArgs e)
         {
-            MenuForm menu = new MenuForm();
-            menu.Show();
-            this.Hide();
+            try
+            {
+                frmMenu menu = new frmMenu();
+                menu.Show();
+                this.Hide();
+            }
+           
+            catch (Exception ex)
+            {
+                MessageBox.Show("Something went wrong: " + ex);
+            }
         }
     }
 }

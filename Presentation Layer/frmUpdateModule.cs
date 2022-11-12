@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PRG2782Project.Presentation_Layer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,19 +11,19 @@ using System.Windows.Forms;
 
 namespace PRG2782Project
 {
-    public partial class LoginForm : Form
+    public partial class frmUpdateModule : Form
     {
-        public LoginForm()
+        public frmUpdateModule()
         {
             InitializeComponent();
         }
 
-        private void btnlogin_Click(object sender, EventArgs e)
+        private void btnback_Click(object sender, EventArgs e)
         {
-            MenuForm menu = new MenuForm();
-            menu.Show();
-            this.Hide();
 
+            frmModuleNEW module = new frmModuleNEW();
+            module.Show();
+            this.Close();
         }
     }
 }

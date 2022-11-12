@@ -46,37 +46,102 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MenuForm.cs">
+    <Compile Include="Data Access Layer\DataHandler.cs" />
+    <Compile Include="Business Logic Layer\Login.cs" />
+    <Compile Include="Data Access Layer\FileHandler.cs" />
+    <Compile Include="Presentation Layer\frmDeleteModule.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MenuForm.Designer.cs">
-      <DependentUpon>MenuForm.cs</DependentUpon>
+    <Compile Include="Presentation Layer\frmDeleteModule.Designer.cs">
+      <DependentUpon>frmDeleteModule.cs</DependentUpon>
     </Compile>
-    <Compile Include="LoginForm.cs">
+    <Compile Include="Presentation Layer\frmDeleteStudent.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LoginForm.Designer.cs">
-      <DependentUpon>LoginForm.cs</DependentUpon>
+    <Compile Include="Presentation Layer\frmDeleteStudent.Designer.cs">
+      <DependentUpon>frmDeleteStudent.cs</DependentUpon>
     </Compile>
-    <Compile Include="ModuleForm.cs">
+    <Compile Include="Presentation Layer\frmSearchModules.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ModuleForm.Designer.cs">
-      <DependentUpon>ModuleForm.cs</DependentUpon>
+    <Compile Include="Presentation Layer\frmSearchModules.Designer.cs">
+      <DependentUpon>frmSearchModules.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentation Layer\frmSearchStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\frmSearchStudent.Designer.cs">
+      <DependentUpon>frmSearchStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\frmUpdateModule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\frmUpdateModule.Designer.cs">
+      <DependentUpon>frmUpdateModule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\frmUpdateStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\frmUpdateStudent.Designer.cs">
+      <DependentUpon>frmUpdateStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\frmLoginNEW.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\frmLoginNEW.Designer.cs">
+      <DependentUpon>frmLoginNEW.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\frmMenuNEW.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\frmMenuNEW.Designer.cs">
+      <DependentUpon>frmMenuNEW.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\frmModuleNEW.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\frmModuleNEW.Designer.cs">
+      <DependentUpon>frmModuleNEW.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\frmStudentNEW.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\frmStudentNEW.Designer.cs">
+      <DependentUpon>frmStudentNEW.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Business Logic Layer\Module.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StudentForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="StudentForm.Designer.cs">
-      <DependentUpon>StudentForm.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="LoginForm.resx">
-      <DependentUpon>LoginForm.cs</DependentUpon>
+    <Compile Include="Business Logic Layer\Student.cs" />
+    <EmbeddedResource Include="Presentation Layer\frmDeleteModule.resx">
+      <DependentUpon>frmDeleteModule.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MenuForm.resx">
-      <DependentUpon>MenuForm.cs</DependentUpon>
+    <EmbeddedResource Include="Presentation Layer\frmDeleteStudent.resx">
+      <DependentUpon>frmDeleteStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\frmSearchModules.resx">
+      <DependentUpon>frmSearchModules.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\frmSearchStudent.resx">
+      <DependentUpon>frmSearchStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\frmUpdateModule.resx">
+      <DependentUpon>frmUpdateModule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\frmUpdateStudent.resx">
+      <DependentUpon>frmUpdateStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\frmLoginNEW.resx">
+      <DependentUpon>frmLoginNEW.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\frmMenuNEW.resx">
+      <DependentUpon>frmMenuNEW.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\frmModuleNEW.resx">
+      <DependentUpon>frmModuleNEW.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\frmStudentNEW.resx">
+      <DependentUpon>frmStudentNEW.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -88,9 +153,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="StudentForm.resx">
-      <DependentUpon>StudentForm.cs</DependentUpon>
-    </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -107,5 +170,6 @@
   <ItemGroup>
     <None Include="Resources\Partners-03.jpg" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

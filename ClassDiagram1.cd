@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="PRG2782Project.Login">
+    <Position X="2.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAEAAACAAAAAgAAAAA=</HashCode>
+      <FileName>Business Logic Layer\Login.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PRG2782Project.LoginForm" Collapsed="true">
+    <Position X="13.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAACAACBAAAACAAAACAAAAAAAAAEAAAQAQAAA=</HashCode>
+      <FileName>Presentation Layer\LoginForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PRG2782Project.MenuForm" Collapsed="true">
+    <Position X="11.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAECAAABAQAACAAAACACAAAAAAKCAAAACAgAA=</HashCode>
+      <FileName>Presentation Layer\MenuForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PRG2782Project.Module">
+    <Position X="4.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAAAAAAAAAACRAAAAAAAAACAAAAGQAAAAA=</HashCode>
+      <FileName>Business Logic Layer\Module.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PRG2782Project.ModuleForm" Collapsed="true">
+    <Position X="13.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAASAQABAQBAGIAAACAAiAAAAAACAAAAAAAAY=</HashCode>
+      <FileName>Presentation Layer\ModuleForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PRG2782Project.Program">
+    <Position X="4.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PRG2782Project.Student">
+    <Position X="0.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACIABAACAAAAgCAAAIAgACAAACAgACAAAAAwAAAgEAQ=</HashCode>
+      <FileName>Business Logic Layer\Student.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PRG2782Project.StudentForm" Collapsed="true">
+    <Position X="10" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAACAAAAACACABwQBAGIAAACAioAAAAgACACAABAAAY=</HashCode>
+      <FileName>Presentation Layer\StudentForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PRG2782Project.Properties.Resources" Collapsed="true">
+    <Position X="10" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAgAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PRG2782Project.Properties.Settings" Collapsed="true">
+    <Position X="11.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PRG2782Project.DataHandler">
+    <Position X="2.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAABAAAAAAAAIAAAABAAAAACAAAQAAAAAAAAAAAGEAA=</HashCode>
+      <FileName>Data Access Layer\DataHandler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
