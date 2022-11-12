@@ -1,11 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Xml.Linq;
 
 
 namespace PRG2782Project
@@ -13,67 +9,55 @@ namespace PRG2782Project
 
     internal class DataHandler
     {
+        // Might need to change settings in Sql Configuration Manager. 'SQL Server' must be running. Enable TCP/IP.
 
-        //might need to change settings in Sql Configuration Manager. 'SQL Server' must be running. Enable TCP/IP.
-        string connect = @"Data Source=(local)\SQLEXPRESS; Initial Catalog=PRG2782Project;Integrated Security=sspi";
-        SqlConnection conn;
-        SqlCommand cmd;
-        SqlDataReader rdr;
-
-
+        SqlConnection connection = new SqlConnection(@"Data Source=(local)\SQLEXPRESS; Initial Catalog=PRG2782Project;Integrated Security=sspi");
+        SqlCommand command;
+        SqlDataReader dataReader;
 
 
         List<Module> modules = new List<Module>();
-       List<Student> students = new List<Student>();
-        List<Login> logins = new List<Login>();
+        List<Student> students = new List<Student>();
 
 
-        //shouldn't these go in file handler class? There are 6 here.
+        // Write Student
         public void WriteStudent(string studentNumber, string studentName, string studentSurname, string studentImage, string studentGender, string studentPhone, string studentAddress, string moduleCodes, DateTime studentDOB)
         {
-            string queryinsert = @"Insert into students  Values('" + studentNumber + "','" + studentName + "','" + studentSurname + "','" + studentImage + "','" + studentGender +
-                "','" + studentPhone + "','" + studentAddress + "','" + moduleCodes + "','" + studentDOB + "')";
-            conn = new SqlConnection(connect);
-           conn.Open();
-           cmd = new SqlCommand(queryinsert, conn);
+            string queryinsert = $@"INSERT INTO students  VALUES('{studentNumber}','{studentName}','{studentSurname}','{studentImage}','{studentGender}','{studentPhone}','{studentAddress}','{moduleCodes}','{studentDOB}')";
+            connection.Open();
+            command = new SqlCommand(queryinsert, connection);
+
             try
             {
-                cmd.ExecuteNonQuery();
+                command.ExecuteNonQuery();
                 MessageBox.Show("Student details saved successfully");
             }
-           catch (Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show("Details not saved: " + ex);
             }
             finally
             {
-                conn.Close();
+                connection.Close();
             }
         }
 
+
+        // Read Module
         public List<Module> ReadModule()
         {
-            string viewquery = @"Select * from modules";
-            conn = new SqlConnection(connect);
-           conn.Open();
-            cmd = new SqlCommand(viewquery, conn);
+            string viewquery = @"SELECT * FROM modules";
+            connection.Open();
+            command = new SqlCommand(viewquery, connection);
 
-            List<Module> module = new List<Module>();
-            Module obj = new Module();
             try
             {
-                rdr = cmd.ExecuteReader();
+                dataReader = command.ExecuteReader();
 
-                while (rdr.Read())
+                while (dataReader.Read())
                 {
-                    obj.ModuleCode = rdr[0].ToString();
-                    obj.ModuleName = rdr[1].ToString();
-                    obj.ModuleDescription = rdr[2].ToString();
-                    obj.ModuleLink = rdr[3].ToString();
-
-                   module.Add(new Module(obj.ModuleCode, obj.ModuleName, obj.ModuleDescription, obj.ModuleLink));
+                    modules.Add(new Module(dataReader[0].ToString(), dataReader[1].ToString(), dataReader[2].ToString(), dataReader[3].ToString()));
                 }
-
             }
             catch (Exception ex)
             {
@@ -81,22 +65,22 @@ namespace PRG2782Project
             }
             finally
             {
-                conn.Close();
+                connection.Close();
             }
-            return module;
+            return modules;
         }
 
 
-
+        // Write Module
         public void WriteModule(string moduleCode, string moduleName, string moduleDescription, string moduleLink)
         {
-            string queryinsert = @"Insert into modules Values('" + moduleCode + "','" + moduleName + "','" + moduleDescription + "','" + moduleLink + "')";
-            conn = new SqlConnection(connect);
-            conn.Open();
-            cmd = new SqlCommand(queryinsert, conn);
+            string queryinsert = @"INSERT INTO modules VALUES('" + moduleCode + "','" + moduleName + "','" + moduleDescription + "','" + moduleLink + "')";
+            connection.Open();
+            command = new SqlCommand(queryinsert, connection);
+
             try
-           {
-                cmd.ExecuteNonQuery();
+            {
+                command.ExecuteNonQuery();
                 MessageBox.Show("Module details saved successfully");
             }
             catch (Exception ex)
@@ -105,38 +89,26 @@ namespace PRG2782Project
             }
             finally
             {
-                conn.Close();
+                connection.Close();
             }
         }
 
+
+        // Read Student
         public List<Student> ReadStudent()
         {
-            string viewquery = @"Select * from students";
-            conn = new SqlConnection(connect);
-            conn.Open();
-            cmd = new SqlCommand(viewquery, conn);
+            string viewquery = @"SELECT * FROM students";
+            connection.Open();
+            command = new SqlCommand(viewquery, connection);
 
-            List<Student> list = new List<Student>();
-            Student obj = new Student();
             try
             {
-                rdr = cmd.ExecuteReader();
+                dataReader = command.ExecuteReader();
 
-                while (rdr.Read())
-               {
-                    obj.StudentNumber = rdr[0].ToString();
-                    obj.StudentName = rdr[1].ToString();
-                    obj.StudentSurname = rdr[2].ToString();
-                    obj.StudentImage = rdr[3].ToString();
-                    obj.StudentDOB = DateTime.Parse(rdr[4].ToString());
-                    obj.StudentGender = rdr[5].ToString();
-                    obj.StudentPhone = rdr[6].ToString();
-                    obj.StudentAddress = rdr[7].ToString();
-                    obj.ModuleCodes = rdr[8].ToString();
-
-                    list.Add(new Student(obj.StudentNumber, obj.StudentName, obj.StudentSurname, obj.StudentImage,  obj.StudentGender, obj.StudentPhone, obj.StudentAddress, obj.ModuleCodes,obj.StudentDOB));
+                while (dataReader.Read())
+                {
+                    students.Add(new Student(dataReader[0].ToString(), dataReader[1].ToString(), dataReader[2].ToString(), dataReader[3].ToString(), dataReader[4].ToString(), dataReader[5].ToString(), dataReader[6].ToString(), dataReader[0].ToString(), DateTime.Parse(dataReader[0].ToString())));
                 }
-
             }
             catch (Exception ex)
             {
@@ -144,51 +116,47 @@ namespace PRG2782Project
             }
             finally
             {
-                conn.Close();
+                connection.Close();
             }
-            return list;
+            return students;
         }
 
 
-
-
-
-        //4 DataHandler Methods Added:
-        public void studentDelete(string studentID)
+        // Delete Student
+        public void DeleteStudent(string studentID)
         {
-            string queryDelete = @"Delete from students Where stdNum=('" + studentID + "')";
-            conn = new SqlConnection(connect);
-            conn.Open();
-            cmd = new SqlCommand(queryDelete, conn);
+            string queryDelete = $@"DELETE FROM students WHERE stdNum='{studentID}')";
+            connection.Open();
+            command = new SqlCommand(queryDelete, connection);
+
             try
             {
-               cmd.ExecuteNonQuery();
+                command.ExecuteNonQuery();
                 MessageBox.Show("Student details deleted successfully");
-           }
+            }
             catch (Exception ex)
             {
                 MessageBox.Show("Details not saved: " + ex);
             }
             finally
             {
-                conn.Close();
+                connection.Close();
             }
-
         }
 
-        public void studentSearch(string studentID)
+
+        // Search Student
+        public void SearchStudent(string studentID)
         {
-            SqlDataReader rdr = null;
+            dataReader = null;
 
-            string querySearch = @"Select * from students Where stdNum=('" + studentID + "')";
-
-            conn.Open();
-
-            SqlCommand cmd = new SqlCommand(querySearch, conn);
+            string querySearch = $@"SELECT * FROM students WHERE stdNum='{studentID}'";
+            connection.Open();
+            command = new SqlCommand(querySearch, connection);
 
             try
             {
-                rdr = cmd.ExecuteReader();
+                dataReader = command.ExecuteReader();
                 MessageBox.Show("Search successful");
             }
             catch (Exception)
@@ -197,41 +165,44 @@ namespace PRG2782Project
             }
             finally
             {
-                conn.Close();
+                connection.Close();
             }
         }
 
-        public void moduleDelete(string moduleID)
+
+        // Delete Module
+        public void DeleteModule(string moduleID)
         {
-            string queryDelete = @"Delete from modules Where modCode=('" + moduleID + "')";
-            conn = new SqlConnection(connect);
-            conn.Open();
-            cmd = new SqlCommand(queryDelete, conn);
+            string queryDelete = $@"DELETE FROM modules WHERE modCode='{moduleID}'";
+            connection.Open();
+            command = new SqlCommand(queryDelete, connection);
+
             try
             {
-                cmd.ExecuteNonQuery();
+                command.ExecuteNonQuery();
                 MessageBox.Show("Module details deleted successfully");
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Details not deleted: " + ex);
-           }
+            }
             finally
             {
-                conn.Close();
+                connection.Close();
             }
         }
 
-        public void studentUpdate(string studentID, string studentName, string studentSurname, DateTime studentDOB, string studentGender, string studentPhone, string studentAddress, string moduleCode,string studentImage)
+
+        // Update Student
+        public void UpdateStudent(string studentID, string studentName, string studentSurname, DateTime studentDOB, string studentGender, string studentPhone, string studentAddress, string moduleCode, string studentImage)
         {
-            string queryUpdate = @"Update students Set stdNum=('" + studentID + "'), stdName=('" + studentName + "'), stdSurname=('" + studentSurname + "'), stdImage=('" + studentImage + "'),dateObirth=('" + studentDOB + "') " +
-                ",gender=('" + studentGender + "'),phoneNum=('" + studentPhone + "'),address=('" + studentAddress + "'),moduleCode=('" + moduleCode + "') Where StudentID=('" + studentID + "')";
-            conn = new SqlConnection(connect);
-            conn.Open();
-            cmd = new SqlCommand(queryUpdate, conn);
+            string queryUpdate = $@"UPDATE students SET stdNum='{studentID}', stdName='{studentName}', stdSurname='{studentSurname}', stdImage='{studentImage}', dateObirth='{studentDOB}' ,gender='{studentGender}', phoneNum='{studentPhone}', address='{studentAddress}', moduleCode='{moduleCode}' WHERE StudentID='{studentID}'";
+            connection.Open();
+            command = new SqlCommand(queryUpdate, connection);
+
             try
             {
-                cmd.ExecuteNonQuery();
+                command.ExecuteNonQuery();
                 MessageBox.Show("Student details update successfully");
             }
             catch (Exception ex)
@@ -240,18 +211,21 @@ namespace PRG2782Project
             }
             finally
             {
-                conn.Close();
+                connection.Close();
             }
         }
-        public void moduleUpdate(string moduleCode, string moduleName, string moduleDescription, string moduleLink)
-       {
-            string queryUpdate = @"Update modules Set modCode=('" + moduleCode + "'), modName=('" + moduleName + "'), modDesc=('" + moduleDescription + "'), link=('" + moduleLink + "') Where StudentID=('" + moduleCode + "')";
-            conn = new SqlConnection(connect);
-            conn.Open();
-            cmd = new SqlCommand(queryUpdate, conn);
+
+
+        // Update Module
+        public void UpdateModule(string moduleCode, string moduleName, string moduleDescription, string moduleLink)
+        {
+            string queryUpdate = $@"UPDATE modules SET modCode='{moduleCode}', modName='{moduleName}', modDesc='{moduleDescription}', link='{moduleLink}' WHERE StudentID='{moduleCode}'";
+            connection.Open();
+            command = new SqlCommand(queryUpdate, connection);
+
             try
             {
-                cmd.ExecuteNonQuery();
+                command.ExecuteNonQuery();
                 MessageBox.Show("Student details update successfully");
             }
             catch (Exception ex)
@@ -260,23 +234,23 @@ namespace PRG2782Project
             }
             finally
             {
-                conn.Close();
+                connection.Close();
             }
         }
 
-        public void moduleSearch(string moduleCode)
+
+        // Search Module
+        public void SearchModule(string moduleCode)
         {
-            SqlDataReader rdr = null;
+            dataReader = null;
 
-            string querySearch = @"Select * from modules Where modCode=('" + moduleCode + "')";
-
-            conn.Open();
-
-            SqlCommand cmd = new SqlCommand(querySearch, conn);
+            string querySearch = $@"SELECT * FROM modules WHERE modCode='{moduleCode}'";
+            connection.Open();
+            command = new SqlCommand(querySearch, connection);
 
             try
             {
-                rdr = cmd.ExecuteReader();
+                dataReader = command.ExecuteReader();
                 MessageBox.Show("Search successful");
             }
             catch (Exception)
@@ -285,7 +259,7 @@ namespace PRG2782Project
             }
             finally
             {
-                conn.Close();
+                connection.Close();
             }
         }
     }
