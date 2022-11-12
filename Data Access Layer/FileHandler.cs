@@ -12,6 +12,8 @@ namespace PRG2782Project.Data_Access_Layer
     {
         string path;
 
+
+        // Write Login
         public void WriteLogin(Login login)
         {
             path = Directory.GetCurrentDirectory();
@@ -51,12 +53,10 @@ namespace PRG2782Project.Data_Access_Layer
             }
 
             MessageBox.Show("Login Details Captured");
-            //catch (DirectoryNotFoundException)
-            //{
-            //    FileStream fileStream = new FileStream(path, FileMode.Create, FileAccess.Write);
-            //}
         }
 
+
+        // Read Login
         public List<Login> ReadLogin()
         {
             List<Login> logins = new List<Login>();
