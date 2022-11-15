@@ -26,7 +26,7 @@ CREATE TABLE students (
   stdNum bigint NOT NULL,
   stdName varchar(50) NOT NULL,
   stdSurname varchar(50) NOT NULL,
-  stdImage varbinary(100) NOT NULL,
+  stdImage varbinary(MAX) NOT NULL,
   dateObirth date NOT NULL,
   gender varchar(50) NOT NULL,
   phoneNum varchar(50) NOT NULL,
@@ -56,9 +56,9 @@ GO
 
 -- This is for the relationship between modules and student tables
 
-ALTER TABLE students
-  ADD CONSTRAINT students_ibfk_1 FOREIGN KEY (moduleCode) REFERENCES modules (modCode)
-GO
+--ALTER TABLE students
+  --ADD CONSTRAINT students_ibfk_1 FOREIGN KEY (moduleCode) REFERENCES modules (modCode)
+--GO
 
 
 -- Adds dummy data for modules table
