@@ -49,7 +49,7 @@ namespace PRG2782Project.Presentation_Layer
             }
             catch(Exception)
             {
-                Console.WriteLine("Was not able to add the Module");
+                MessageBox.Show("Was not able to add the Module");
             }
         }
 
@@ -63,7 +63,7 @@ namespace PRG2782Project.Presentation_Layer
             }
             catch (Exception)
             {
-                Console.WriteLine("Was not able to open search form");
+                MessageBox.Show("Was not able to open search form");
             }
 
         }
@@ -78,7 +78,7 @@ namespace PRG2782Project.Presentation_Layer
             }
             catch (Exception)
             {
-                Console.WriteLine("Was not able to open delete form");
+                MessageBox.Show("Was not able to open delete form");
             }
 
         }
@@ -93,7 +93,7 @@ namespace PRG2782Project.Presentation_Layer
             }
             catch(Exception)
             {
-                Console.WriteLine("Was not able to open update form");
+                MessageBox.Show("Was not able to open update form");
             }
         }
 
@@ -105,7 +105,7 @@ namespace PRG2782Project.Presentation_Layer
             }
             catch (Exception)
             {
-                Console.WriteLine("Was not able to exit form");
+                MessageBox.Show("Was not able to exit form");
             }
 
         }
@@ -131,7 +131,7 @@ namespace PRG2782Project.Presentation_Layer
             }
             catch(Exception)
             {
-                Console.WriteLine("User will not be able to see all data");
+                MessageBox.Show("User will not be able to see all data");
             }
         }
     }

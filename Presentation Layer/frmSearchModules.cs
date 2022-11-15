@@ -13,6 +13,7 @@ namespace PRG2782Project
 {
     public partial class frmSearchModules : Form
     {
+        DataHandler data = new DataHandler();
         public frmSearchModules()
         {
             InitializeComponent();
@@ -20,14 +21,30 @@ namespace PRG2782Project
 
         private void button1_Click(object sender, EventArgs e)
         {
-            frmModuleNEW module = new frmModuleNEW();
-            module.Show();
-            this.Close();
+            try
+            {
+                frmModuleNEW module = new frmModuleNEW();
+                module.Show();
+                this.Close();
+            }
+            catch(Exception)
+            {
+                MessageBox.Show("Not able to return to module form");
+            }
+           
         }
 
         private void frmSearchModules_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Environment.Exit(0);
+            try
+            {
+                Environment.Exit(0);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Not able to exit");
+            }
+
         }
 
         private void frmSearchModules_Load(object sender, EventArgs e)
@@ -38,8 +55,22 @@ namespace PRG2782Project
 
         private void Refresh(List<Module> modules)
         {
-            dgvSearchModules.DataSource = modules;
-            dgvSearchModules.Refresh();
+            //dgvSearchModules.DataSource = modules;
+            //dgvSearchModules.Refresh();
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                dgvSearchModules.DataSource = data.SearchModule(txtModuleCode.Text);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Not able to search");
+            }
         }
     }
-}
+
+    
+    }
