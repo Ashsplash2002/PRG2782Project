@@ -29,5 +29,10 @@ namespace PRG2782Project
         {
             Environment.Exit(0);
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
