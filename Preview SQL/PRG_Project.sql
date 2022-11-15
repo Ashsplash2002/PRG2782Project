@@ -64,7 +64,7 @@ GO
 -- Adds dummy data for modules table
 
 INSERT INTO modules(modCode, modName, modDesc, link)
-VALUES ('TEST2781','IT','This module will be about general IT information','https://this.isFake.com')
+VALUES ('TEST272','IT','This module will be about general IT information','https://this.isFake.com')
 GO
 
 
