@@ -107,7 +107,15 @@ namespace PRG2782Project.Presentation_Layer
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            Environment.Exit(0);
+            try
+            {
+                Environment.Exit(0);
+            }
+            catch(Exception)
+            {
+                Console.WriteLine("The exit button is not working");
+            }
+            
         }
 
 
