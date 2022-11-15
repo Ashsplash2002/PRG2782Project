@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnlogout = new System.Windows.Forms.Button();
             this.btnModule = new System.Windows.Forms.Button();
             this.btnStudent = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.lblMoveForm = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -46,7 +46,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
+            this.groupBox1.BackColor = System.Drawing.Color.Silver;
             this.groupBox1.Controls.Add(this.panel4);
             this.groupBox1.Controls.Add(this.panel2);
             this.groupBox1.Controls.Add(this.panel1);
@@ -63,6 +63,39 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Navigation";
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.panel3);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel4.Location = new System.Drawing.Point(3, 556);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(261, 56);
+            this.panel4.TabIndex = 7;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.panel3.Location = new System.Drawing.Point(27, 26);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(206, 5);
+            this.panel3.TabIndex = 6;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.panel2.Location = new System.Drawing.Point(30, 312);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(206, 5);
+            this.panel2.TabIndex = 5;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.panel1.Location = new System.Drawing.Point(30, 206);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(206, 5);
+            this.panel1.TabIndex = 4;
             // 
             // btnExit
             // 
@@ -131,7 +164,7 @@
             this.label1.Font = new System.Drawing.Font("Nirmala UI", 50F, System.Drawing.FontStyle.Bold);
             this.label1.Location = new System.Drawing.Point(461, 241);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(330, 89);
+            this.label1.Size = new System.Drawing.Size(414, 112);
             this.label1.TabIndex = 3;
             this.label1.Text = "BELGIUM";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -142,43 +175,10 @@
             this.label2.Font = new System.Drawing.Font("Nirmala UI", 50F, System.Drawing.FontStyle.Bold);
             this.label2.Location = new System.Drawing.Point(461, 340);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(318, 89);
+            this.label2.Size = new System.Drawing.Size(398, 112);
             this.label2.TabIndex = 4;
             this.label2.Text = "CAMPUS";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.panel1.Location = new System.Drawing.Point(30, 206);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(206, 5);
-            this.panel1.TabIndex = 4;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.panel2.Location = new System.Drawing.Point(30, 312);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(206, 5);
-            this.panel2.TabIndex = 5;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.panel3.Location = new System.Drawing.Point(27, 26);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(206, 5);
-            this.panel3.TabIndex = 6;
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.panel3);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(3, 556);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(261, 56);
-            this.panel4.TabIndex = 7;
             // 
             // lblMoveForm
             // 
@@ -188,7 +188,7 @@
             this.lblMoveForm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(33)))), ((int)(((byte)(61)))));
             this.lblMoveForm.Location = new System.Drawing.Point(617, 9);
             this.lblMoveForm.Name = "lblMoveForm";
-            this.lblMoveForm.Size = new System.Drawing.Size(19, 19);
+            this.lblMoveForm.Size = new System.Drawing.Size(22, 23);
             this.lblMoveForm.TabIndex = 15;
             this.lblMoveForm.Text = "||";
             this.lblMoveForm.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -196,7 +196,7 @@
             // 
             // frmMenuNEW
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1252, 671);
