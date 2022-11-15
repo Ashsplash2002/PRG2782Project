@@ -21,7 +21,7 @@ namespace PRG2782Project
 
 
         // Search Module
-        public void SearchModule(string moduleCode)
+        public List<Module> SearchModule(string moduleCode)
         {
             dataReader = null;
 
@@ -42,6 +42,7 @@ namespace PRG2782Project
             {
                 connection.Close();
             }
+            return modules;
         }
 
 
@@ -99,7 +100,7 @@ namespace PRG2782Project
         // Update Module
         public void UpdateModule(string moduleCode, string moduleName, string moduleDescription, string moduleLink)
         {
-            string queryUpdate = $@"UPDATE modules SET modCode='{moduleCode}', modName='{moduleName}', modDesc='{moduleDescription}', link='{moduleLink}' WHERE StudentID='{moduleCode}'";
+            string queryUpdate = $@"UPDATE modules SET modCode='{moduleCode}', modName='{moduleName}', modDesc='{moduleDescription}', link='{moduleLink}' WHERE modCode='{moduleCode}'";
             connection.Open();
             command = new SqlCommand(queryUpdate, connection);
 
@@ -143,7 +144,7 @@ namespace PRG2782Project
 
 
         // Search Student
-        public void SearchStudent(string studentID)
+        public void SearchStudent(int studentID)
         {
             dataReader = null;
 
@@ -180,7 +181,7 @@ namespace PRG2782Project
 
                 while (dataReader.Read())
                 {
-                    students.Add(new Student(dataReader[0].ToString(), dataReader[1].ToString(), dataReader[2].ToString(), dataReader[3].ToString(), dataReader[4].ToString(), dataReader[5].ToString(), dataReader[6].ToString(), dataReader[0].ToString(), DateTime.Parse(dataReader[0].ToString())));
+                    students.Add(new Student(int.Parse(dataReader[0].ToString()), dataReader[1].ToString(), dataReader[2].ToString(), dataReader[3].ToString(), dataReader[4].ToString(), dataReader[5].ToString(), dataReader[6].ToString(), dataReader[7].ToString(), DateTime.Parse(dataReader[8].ToString())));
                 }
             }
             catch (Exception ex)
@@ -196,7 +197,7 @@ namespace PRG2782Project
 
 
         // Create Student
-        public void CreateStudent(string studentNumber, string studentName, string studentSurname, string studentImage, string studentGender, string studentPhone, string studentAddress, string moduleCodes, DateTime studentDOB)
+        public void CreateStudent(int studentNumber, string studentName, string studentSurname, string studentImage, string studentGender, string studentPhone, string studentAddress, string moduleCodes, DateTime studentDOB)
         {
             string queryinsert = $@"INSERT INTO students  VALUES('{studentNumber}','{studentName}','{studentSurname}','{studentImage}','{studentGender}','{studentPhone}','{studentAddress}','{moduleCodes}','{studentDOB}')";
             connection.Open();

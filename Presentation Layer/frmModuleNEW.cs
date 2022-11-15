@@ -118,9 +118,9 @@ namespace PRG2782Project.Presentation_Layer
 
         private void Refresh(List<Module> modules)
         {
-            //modules = data.ReadModule();
-            //dgvModules.DataSource = modules;
-            //dgvModules.Refresh();
+            modules = data.ReadModule();
+            dgvModules.DataSource = modules;
+            dgvModules.Refresh();
         }
 
         private void btnseeall_Click(object sender, EventArgs e)

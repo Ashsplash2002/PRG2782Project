@@ -8,14 +8,16 @@ namespace PRG2782Project
 {
     internal class Student
     {
-        private string studentNumber, studentName, studentSurname, studentImage, studentGender, studentPhone, studentAddress, moduleCodes;
+        private int studentNumber;
+        private string studentName, studentSurname, studentImage, studentGender, studentPhone, studentAddress, moduleCodes;
         private DateTime studentDOB;
-
+        
         public Student()
         {
 
         }
-        public Student(string studentNumber, string studentName, string studentSurname, string studentImage, string studentGender, string studentPhone, string studentAddress, string moduleCodes, DateTime studentDOB)
+
+        public Student(int studentNumber, string studentName, string studentSurname, string studentImage, string studentGender, string studentPhone, string studentAddress, string moduleCodes, DateTime studentDOB)
         {
             this.StudentNumber = studentNumber;
             this.StudentName = studentName;
@@ -28,7 +30,7 @@ namespace PRG2782Project
             this.StudentDOB = studentDOB;
         }
 
-        public string StudentNumber { get => studentNumber; set => studentNumber = value; }
+        public int StudentNumber { get => studentNumber; set => studentNumber = value; }
         public string StudentName { get => studentName; set => studentName = value; }
         public string StudentSurname { get => studentSurname; set => studentSurname = value; }
         public string StudentImage { get => studentImage; set => studentImage = value; }

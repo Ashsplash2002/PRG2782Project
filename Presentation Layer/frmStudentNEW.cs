@@ -1,11 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace PRG2782Project.Presentation_Layer
@@ -30,36 +24,63 @@ namespace PRG2782Project.Presentation_Layer
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Something went wrong: " + ex);
+                MessageBox.Show("Not able to go to menu form");
             }
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            frmUpdateStudent frm = new frmUpdateStudent();
-            frm.Show();
-            this.Close();
+            try
+            {
+                frmUpdateStudent frm = new frmUpdateStudent();
+                frm.Show();
+                this.Close();
+            }
 
+            catch (Exception)
+            {
+                MessageBox.Show("Not able to go to update form");
+            }
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            frmSearchStudent frmSearch = new frmSearchStudent();
-            frmSearch.Show();
-            this.Close();
-
+            try
+            {
+                frmSearchStudent frmSearch = new frmSearchStudent();
+                frmSearch.Show();
+                this.Close();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Not able to go to search form");
+            }
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            frmDeleteStudent delete = new frmDeleteStudent();
-            delete.Show();
-            this.Close();
+            try
+            {
+                frmDeleteStudent delete = new frmDeleteStudent();
+                delete.Show();
+                this.Close();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Not able to go to delete form");
+            }
         }
 
         private void frmStudentNEW_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Environment.Exit(0);
+            try
+            {
+                Environment.Exit(0);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Not able to go to exit form");
+            }
         }
 
         private void frmStudentNEW_Load(object sender, EventArgs e)
@@ -69,19 +90,26 @@ namespace PRG2782Project.Presentation_Layer
 
         private void btnCreate_Click(object sender, EventArgs e)
         {
-            string studentNumber = txtStudentNumber.Text;
-            string studentName = txtStudentName.Text;
-            string studentSurname = txtStudentSurname.Text;
-            string studentImage = pbStudentImage.Image.ToString();
-            string studentGender = txtGender.Text;
-            string studentPhone = txtPhone.Text;
-            string studentAddress = txtAddress.Text;
-            string moduleCodes = txtModuleCodes.Text;
-            DateTime studentDOB = DateTime.Parse(txtDOB.Text);
+            try
+            {
+                int studentNumber = int.Parse(txtStudentNumber.Text);
+                string studentName = txtStudentName.Text;
+                string studentSurname = txtStudentSurname.Text;
+                string studentImage = pbStudentImage.Image.ToString();
+                string studentGender = txtGender.Text;
+                string studentPhone = txtPhone.Text;
+                string studentAddress = txtAddress.Text;
+                string moduleCodes = txtModuleCodes.Text;
+                DateTime studentDOB = dtpDOB.Value.Date;
 
-            data.CreateStudent(studentNumber, studentName, studentSurname, studentImage, studentGender, studentPhone, studentAddress, moduleCodes, studentDOB);
+                data.CreateStudent(studentNumber, studentName, studentSurname, studentImage, studentGender, studentPhone, studentAddress, moduleCodes, studentDOB);
 
-            Refresh(students);
+                Refresh(students);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Not able to add a student");
+            }
         }
 
 
@@ -90,6 +118,41 @@ namespace PRG2782Project.Presentation_Layer
             students = data.ReadStudent();
             dgvStudents.DataSource = students;
             dgvStudents.Refresh();
+        }
+
+        private void btnUpload_Click(object sender, EventArgs e)
+        {
+            string image;
+            try
+            {
+                OpenFileDialog imageUpload = new OpenFileDialog();
+                imageUpload.Filter = "Image Files (*.jpg;*.jpeg;.*.gif;)|*.jpg;*.jpeg;.*.gif";
+                if (imageUpload.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    image = imageUpload.FileName;
+                    pbStudentImage.ImageLocation = image;
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("error occurred");
+            }
+        }
+
+        private void dgvStudents_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvStudents.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+            {
+                txtStudentNumber.Text = dgvStudents.Rows[e.RowIndex].Cells["stdNum"].FormattedValue.ToString();
+                txtStudentName.Text = dgvStudents.Rows[e.RowIndex].Cells["stdName"].FormattedValue.ToString();
+                txtStudentSurname.Text = dgvStudents.Rows[e.RowIndex].Cells["stdSurname"].FormattedValue.ToString();
+                pbStudentImage.ImageLocation = dgvStudents.Rows[e.RowIndex].Cells["stdImage"].FormattedValue.ToString();
+                txtGender.Text = dgvStudents.Rows[e.RowIndex].Cells["gender"].FormattedValue.ToString();
+                txtPhone.Text = dgvStudents.Rows[e.RowIndex].Cells["phoneNum"].FormattedValue.ToString();
+                txtAddress.Text = dgvStudents.Rows[e.RowIndex].Cells["address"].FormattedValue.ToString();
+                txtModuleCodes.Text = dgvStudents.Rows[e.RowIndex].Cells["moduleCode"].FormattedValue.ToString();
+                dtpDOB.Text = dgvStudents.Rows[e.RowIndex].Cells["dateObirth"].FormattedValue.ToString();
+            }
         }
     }
 }

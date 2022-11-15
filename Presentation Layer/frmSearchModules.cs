@@ -71,6 +71,4 @@ namespace PRG2782Project
             }
         }
     }
-
-    
-    }
+}
