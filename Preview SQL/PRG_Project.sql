@@ -12,7 +12,7 @@ GO
 -- This creates the modules table
 
 CREATE TABLE modules (
-  modCode varchar(7) NOT NULL IDENTITY(1, 1),
+  modCode varchar(7) NOT NULL,
   modName varchar(50) NOT NULL,
   modDesc varchar(100) NOT NULL,
   link varchar(50) NOT NULL
@@ -23,10 +23,10 @@ GO
 -- This creates the student table
 
 CREATE TABLE students (
-  stdNum bigint NOT NULL IDENTITY(1, 1),
+  stdNum bigint NOT NULL,
   stdName varchar(50) NOT NULL,
   stdSurname varchar(50) NOT NULL,
-  stdImage varbinary(100) NOT NULL,
+  stdImage varbinary(MAX) NOT NULL,
   dateObirth date NOT NULL,
   gender varchar(50) NOT NULL,
   phoneNum varchar(50) NOT NULL,
@@ -56,20 +56,20 @@ GO
 
 -- This is for the relationship between modules and student tables
 
-ALTER TABLE students
-  ADD CONSTRAINT students_ibfk_1 FOREIGN KEY (moduleCode) REFERENCES modules (modCode)
-GO
+--ALTER TABLE students
+  --ADD CONSTRAINT students_ibfk_1 FOREIGN KEY (moduleCode) REFERENCES modules (modCode)
+--GO
 
 
 -- Adds dummy data for modules table
 
-INSERT INTO modules(modName, modDesc, link)
-VALUES ('IT','This module will be about general IT information','https://this.isFake.com')
+INSERT INTO modules(modCode, modName, modDesc, link)
+VALUES ('TEST272','IT','This module will be about general IT information','https://this.isFake.com')
 GO
 
 
 -- Adds dummy data for students table
 
-INSERT INTO students(stdName, stdSurname, stdImage, dateObirth, gender, phoneNum, address, moduleCode) 
-VALUES ('Bob','Builder',CAST('test' AS VARBINARY(MAX)),'2022-10-17','M','0811321234','1 Snake Drive','1')
+INSERT INTO students(stdNum, stdName, stdSurname, stdImage, dateObirth, gender, phoneNum, address, moduleCode) 
+VALUES ('123456','Bob','Builder',CAST('test' AS VARBINARY(MAX)),'2022-10-17','M','0811321234','1 Snake Drive','1')
 GO
