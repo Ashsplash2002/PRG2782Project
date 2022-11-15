@@ -42,10 +42,9 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(40, 69);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(53, 85);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(144, 18);
+            this.label2.Size = new System.Drawing.Size(185, 24);
             this.label2.TabIndex = 4;
             this.label2.Text = "Enter Module Code: ";
             // 
@@ -53,62 +52,65 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label1.Location = new System.Drawing.Point(273, 25);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(364, 31);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 25);
+            this.label1.Size = new System.Drawing.Size(0, 29);
             this.label1.TabIndex = 17;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(38, 17);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(51, 21);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(347, 31);
+            this.label6.Size = new System.Drawing.Size(431, 39);
             this.label6.TabIndex = 18;
             this.label6.Text = "Search A Specific Module";
             // 
             // dgvSearchModules
             // 
             this.dgvSearchModules.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSearchModules.Location = new System.Drawing.Point(43, 102);
-            this.dgvSearchModules.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvSearchModules.Location = new System.Drawing.Point(57, 126);
+            this.dgvSearchModules.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvSearchModules.Name = "dgvSearchModules";
             this.dgvSearchModules.RowHeadersWidth = 51;
             this.dgvSearchModules.RowTemplate.Height = 24;
-            this.dgvSearchModules.Size = new System.Drawing.Size(326, 167);
+            this.dgvSearchModules.Size = new System.Drawing.Size(435, 206);
             this.dgvSearchModules.TabIndex = 17;
             // 
             // txtModuleCode
             // 
-            this.txtModuleCode.Location = new System.Drawing.Point(183, 71);
-            this.txtModuleCode.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtModuleCode.Location = new System.Drawing.Point(244, 87);
+            this.txtModuleCode.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtModuleCode.Name = "txtModuleCode";
-            this.txtModuleCode.Size = new System.Drawing.Size(186, 20);
+            this.txtModuleCode.Size = new System.Drawing.Size(247, 22);
             this.txtModuleCode.TabIndex = 19;
             // 
             // btnSearch
             // 
-            this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnSearch.BackColor = System.Drawing.Color.Black;
+            this.btnSearch.FlatAppearance.BorderSize = 0;
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.Location = new System.Drawing.Point(43, 292);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSearch.ForeColor = System.Drawing.Color.White;
+            this.btnSearch.Location = new System.Drawing.Point(57, 359);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(70, 27);
+            this.btnSearch.Size = new System.Drawing.Size(93, 33);
             this.btnSearch.TabIndex = 20;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // btnback
             // 
-            this.btnback.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnback.BackColor = System.Drawing.Color.Black;
+            this.btnback.FlatAppearance.BorderSize = 0;
             this.btnback.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnback.Location = new System.Drawing.Point(256, 292);
-            this.btnback.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnback.ForeColor = System.Drawing.Color.White;
+            this.btnback.Location = new System.Drawing.Point(341, 359);
+            this.btnback.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnback.Name = "btnback";
-            this.btnback.Size = new System.Drawing.Size(112, 27);
+            this.btnback.Size = new System.Drawing.Size(149, 33);
             this.btnback.TabIndex = 21;
             this.btnback.Text = "Back to Module Form";
             this.btnback.UseVisualStyleBackColor = false;
@@ -116,10 +118,10 @@
             // 
             // frmSearchModules
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(430, 344);
+            this.ClientSize = new System.Drawing.Size(573, 423);
             this.Controls.Add(this.btnback);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtModuleCode);
@@ -127,12 +129,11 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmSearchModules";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmSearchModules";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmSearchModules_FormClosed);
-            this.Load += new System.EventHandler(this.frmSearchModules_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSearchModules)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

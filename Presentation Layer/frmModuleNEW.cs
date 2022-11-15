@@ -37,39 +37,77 @@ namespace PRG2782Project.Presentation_Layer
 
         private void btnCreate_Click(object sender, EventArgs e)
         {
-            string moduleCode = txtModuleCode.Text;
-            string moduleName = txtModuleName.Text;
-            string moduleDescription = txtModuleDescription.Text;
-            string moduleLink = txtLinks.Text;
-            data.CreateModule(moduleCode, moduleName, moduleDescription, moduleLink);
+            try
+            {
+                string moduleCode = txtModuleCode.Text;
+                string moduleName = txtModuleName.Text;
+                string moduleDescription = txtModuleDescription.Text;
+                string moduleLink = txtLinks.Text;
+                data.CreateModule(moduleCode, moduleName, moduleDescription, moduleLink);
 
-            Refresh(modules);
+                Refresh(modules);
+            }
+            catch(Exception)
+            {
+                MessageBox.Show("Was not able to add the Module");
+            }
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            frmSearchModules search = new frmSearchModules();
-            search.Show();
-            this.Close();
+            try
+            {
+                frmSearchModules search = new frmSearchModules();
+                search.Show();
+                this.Close();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Was not able to open search form");
+            }
+
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            frmDeleteModule delete = new frmDeleteModule(); 
-            delete.Show();
-            this.Close();
+            try
+            {
+                frmDeleteModule delete = new frmDeleteModule();
+                delete.Show();
+                this.Close();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Was not able to open delete form");
+            }
+
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            frmUpdateModule update = new frmUpdateModule();
-            update.Show();
-            this.Close();
+            try
+            {
+                frmUpdateModule update = new frmUpdateModule();
+                update.Show();
+                this.Close();
+            }
+            catch(Exception)
+            {
+                MessageBox.Show("Was not able to open update form");
+            }
         }
 
         private void frmModuleNEW_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Environment.Exit(0);
+            try
+            {
+                Environment.Exit(0);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Was not able to exit form");
+            }
+
         }
 
         private void frmModuleNEW_Load(object sender, EventArgs e)
@@ -80,9 +118,21 @@ namespace PRG2782Project.Presentation_Layer
 
         private void Refresh(List<Module> modules)
         {
-            modules = data.ReadModule();
-            dgvModules.DataSource = modules;
-            dgvModules.Refresh();
+            //modules = data.ReadModule();
+            //dgvModules.DataSource = modules;
+            //dgvModules.Refresh();
+        }
+
+        private void btnseeall_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                dgvModules.DataSource = data.ReadModule();
+            }
+            catch(Exception)
+            {
+                MessageBox.Show("User will not be able to see all data");
+            }
         }
     }
 }
