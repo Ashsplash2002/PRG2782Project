@@ -170,7 +170,7 @@ namespace PRG2782Project
         }
 
         //Used for see all button
-        public DataTable SeeAll()
+        public DataTable ReadStudent()
         {
      
             string seeallquery = @"SELECT * FROM students";
@@ -182,31 +182,31 @@ namespace PRG2782Project
         }
 
         // Read Student
-        public List<Student> ReadStudent()
-        {
-            string viewquery = @"SELECT * FROM students";
-            connection.Open();
-            command = new SqlCommand(viewquery, connection);
+        //public List<Student> ReadStudent()
+        //{
+        //    string viewquery = @"SELECT * FROM students";
+        //    connection.Open();
+        //    command = new SqlCommand(viewquery, connection);
 
-            try
-            {
-                dataReader = command.ExecuteReader();
+        //    try
+        //    {
+        //        dataReader = command.ExecuteReader();
 
-                while (dataReader.Read())
-                {
-                    students.Add(new Student(int.Parse(dataReader[0].ToString()), dataReader[1].ToString(), dataReader[2].ToString(), dataReader[3].ToString(), dataReader[4].ToString(), dataReader[5].ToString(), dataReader[6].ToString(), dataReader[7].ToString(), DateTime.Parse(dataReader[8].ToString())));
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Something went wrong: " + ex);
-            }
-            finally
-            {
-                connection.Close();
-            }
-            return students;
-        }
+        //        while (dataReader.Read())
+        //        {
+        //            students.Add(new Student(int.Parse(dataReader[0].ToString()), dataReader[1].ToString(), dataReader[2].ToString(), dataReader[3].ToString(), dataReader[4].ToString(), dataReader[5].ToString(), dataReader[6].ToString(), dataReader[7].ToString(), DateTime.Parse(dataReader[8].ToString())));
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show("Something went wrong: " + ex);
+        //    }
+        //    finally
+        //    {
+        //        connection.Close();
+        //    }
+        //    return students;
+        //}
 
 
         // Create Student

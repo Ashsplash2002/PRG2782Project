@@ -115,8 +115,7 @@ namespace PRG2782Project.Presentation_Layer
 
         private void Refresh(List<Student> students)
         {
-            students = data.ReadStudent();
-            dgvStudents.DataSource = students;
+            dgvStudents.DataSource = data.ReadStudent();
             dgvStudents.Refresh();
         }
 
@@ -160,7 +159,7 @@ namespace PRG2782Project.Presentation_Layer
             try
             {
 
-                dgvStudents.DataSource = data.SeeAll();
+                dgvStudents.DataSource = data.ReadStudent();
                 
             }
             catch (Exception)
