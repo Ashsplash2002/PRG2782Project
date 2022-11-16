@@ -27,7 +27,7 @@ namespace PRG2782Project.Presentation_Layer
             {
                 frmMenuNEW menu = new frmMenuNEW();
                 menu.Show();
-                this.Close();
+                this.Hide();
             }
             catch (Exception ex)
             {
@@ -59,7 +59,7 @@ namespace PRG2782Project.Presentation_Layer
             {
                 frmSearchModules search = new frmSearchModules();
                 search.Show();
-                this.Close();
+                this.Hide();
             }
             catch (Exception)
             {
@@ -74,7 +74,7 @@ namespace PRG2782Project.Presentation_Layer
             {
                 frmDeleteModule delete = new frmDeleteModule();
                 delete.Show();
-                this.Close();
+                this.Hide();
             }
             catch (Exception)
             {
@@ -89,7 +89,7 @@ namespace PRG2782Project.Presentation_Layer
             {
                 frmUpdateModule update = new frmUpdateModule();
                 update.Show();
-                this.Close();
+                this.Hide();
             }
             catch(Exception)
             {
@@ -118,9 +118,9 @@ namespace PRG2782Project.Presentation_Layer
 
         private void Refresh(List<Module> modules)
         {
-            modules = data.ReadModule();
-            dgvModules.DataSource = modules;
-            dgvModules.Refresh();
+            //modules = data.ReadModule();
+            dgvModules.DataSource = data.ReadModule();
+            //dgvModules.Refresh();
         }
 
         private void btnseeall_Click(object sender, EventArgs e)
@@ -129,7 +129,7 @@ namespace PRG2782Project.Presentation_Layer
             {
                 dgvModules.DataSource = data.ReadModule();
             }
-            catch(Exception)
+            catch (Exception)
             {
                 MessageBox.Show("User will not be able to see all data");
             }

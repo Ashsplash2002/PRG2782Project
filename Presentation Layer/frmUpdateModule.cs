@@ -13,6 +13,8 @@ namespace PRG2782Project
 {
     public partial class frmUpdateModule : Form
     {
+        DataHandler data = new DataHandler();
+
         public frmUpdateModule()
         {
             InitializeComponent();
@@ -20,15 +22,46 @@ namespace PRG2782Project
 
         private void btnback_Click(object sender, EventArgs e)
         {
-
             frmModuleNEW module = new frmModuleNEW();
             module.Show();
             this.Close();
         }
 
-        private void frmUpdateModule_FormClosed(object sender, FormClosedEventArgs e)
+        
+
+        private void btnUpdate_Click(object sender, EventArgs e)
         {
-            Environment.Exit(0);
+            try
+            {
+                data.UpdateModule(txtModuleCode.Text, txtModuleName.Text, txtModuleDescription.Text, txtLinks.Text);
+                MessageBox.Show("Module Updated");
+                txtModuleName.Clear();
+                txtModuleDescription.Clear();
+                txtLinks.Clear();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Not able to update module");
+            }
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                List<Module> modules = new List<Module>();
+                modules = data.SearchModule(txtModuleCode.Text);
+                foreach (var item in modules)
+                {
+                    txtModuleName.Text = item.ModuleName;
+                    txtModuleDescription.Text = item.ModuleDescription;
+                    txtLinks.Text = item.ModuleLink;
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Not able to search module");
+            }
         }
     }
 }

@@ -13,6 +13,7 @@ namespace PRG2782Project
 {
     public partial class frmDeleteModule : Form
     {
+        DataHandler data = new DataHandler();
         public frmDeleteModule()
         {
             InitializeComponent();
@@ -22,7 +23,7 @@ namespace PRG2782Project
         {
             frmModuleNEW module = new frmModuleNEW();
             module.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void frmDeleteModule_Load(object sender, EventArgs e)
@@ -33,6 +34,32 @@ namespace PRG2782Project
         private void frmDeleteModule_FormClosed(object sender, FormClosedEventArgs e)
         {
             Environment.Exit(0);
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                data.DeleteModule(txtModuleCode.Text);
+                MessageBox.Show("Successfully deleted");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Not able to delete module");
+            }
+
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                dgvdelete.DataSource = data.SearchModule(txtModuleCode.Text);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Not able to search module");
+            }
         }
     }
 }

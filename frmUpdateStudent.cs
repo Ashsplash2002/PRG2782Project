@@ -43,7 +43,7 @@ namespace PRG2782Project
             {
                 //string studentGender, string studentPhone, string studentAddress, string moduleCode, string studentImage
                 //pbStudentImage.Text???
-                data.UpdateStudent(txtStudentCode.Text, txtStudentNameandSurname.Text, txtstudentsurname.Text, DateTime.Parse(txtDOB.Text), txtGender.Text, txtPhone.Text, txtAddress.Text, pbStudentImage.Text);
+                data.UpdateStudent(txtStudentCode.Text, txtStudentNameandSurname.Text, txtstudentsurname.Text, DateTime.Parse(txtDOB.Text), txtGender.Text, txtPhone.Text, txtAddress.Text, pbStudentImage1.Text);
                 MessageBox.Show("Student Updated");
                 txtStudentNameandSurname.Clear();
                 txtstudentsurname.Clear();
@@ -69,7 +69,7 @@ namespace PRG2782Project
                     //Image.Text???
                     txtStudentNameandSurname.Text = item.StudentName;
                     txtstudentsurname.Text = item.StudentSurname;
-                    pbStudentImage.Text = item.StudentImage;
+                    pbStudentImage1.Text = item.StudentImage;
                     txtGender.Text = item.StudentGender;
                     txtPhone.Text = item.StudentPhone;
                     txtAddress.Text = item.StudentAddress;
@@ -81,6 +81,30 @@ namespace PRG2782Project
             {
                 MessageBox.Show("Not able to search module");
             }
+        }
+
+        private void btnUpload1_Click(object sender, EventArgs e)
+        {
+            string image;
+            try
+            {
+                OpenFileDialog imageUpload = new OpenFileDialog();
+                imageUpload.Filter = "Image Files (*.jpg;*.jpeg;.*.gif;)|*.jpg;*.jpeg;.*.gif";
+                if (imageUpload.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    image = imageUpload.FileName;
+                    pbStudentImage1.ImageLocation = image;
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("error occurred");
+            }
+        }
+
+        private void pbStudentImage1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

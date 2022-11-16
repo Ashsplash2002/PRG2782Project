@@ -13,6 +13,8 @@ namespace PRG2782Project
 {
     public partial class frmSearchStudent : Form
     {
+        DataHandler data = new DataHandler();
+
         public frmSearchStudent()
         {
             InitializeComponent();
@@ -22,12 +24,24 @@ namespace PRG2782Project
         {
             frmStudentNEW student = new frmStudentNEW();
             student.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void frmSearchStudent_FormClosed(object sender, FormClosedEventArgs e)
         {
             Environment.Exit(0);
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                dgvSearch.DataSource = data.SearchStudent(txtStudentCode.Text);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Not able to search for student");
+            }
         }
     }
 }

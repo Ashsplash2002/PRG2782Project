@@ -34,7 +34,7 @@ namespace PRG2782Project.Presentation_Layer
             {
                 frmUpdateStudent frm = new frmUpdateStudent();
                 frm.Show();
-                this.Close();
+                this.Hide();
             }
 
             catch (Exception)
@@ -49,7 +49,7 @@ namespace PRG2782Project.Presentation_Layer
             {
                 frmSearchStudent frmSearch = new frmSearchStudent();
                 frmSearch.Show();
-                this.Close();
+                this.Hide();
             }
             catch (Exception)
             {
@@ -63,7 +63,7 @@ namespace PRG2782Project.Presentation_Layer
             {
                 frmDeleteStudent delete = new frmDeleteStudent();
                 delete.Show();
-                this.Close();
+                this.Hide();
             }
             catch (Exception)
             {
@@ -152,6 +152,19 @@ namespace PRG2782Project.Presentation_Layer
                 txtAddress.Text = dgvStudents.Rows[e.RowIndex].Cells["address"].FormattedValue.ToString();
                 txtModuleCodes.Text = dgvStudents.Rows[e.RowIndex].Cells["moduleCode"].FormattedValue.ToString();
                 dtpDOB.Text = dgvStudents.Rows[e.RowIndex].Cells["dateObirth"].FormattedValue.ToString();
+            }
+        }
+
+        private void btnseeall_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                dgvStudents.DataSource = data.ReadStudent();
+                
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Not able to see all students");
             }
         }
     }
