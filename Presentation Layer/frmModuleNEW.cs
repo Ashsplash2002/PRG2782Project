@@ -59,7 +59,7 @@ namespace PRG2782Project.Presentation_Layer
             {
                 frmSearchModules search = new frmSearchModules();
                 search.Show();
-                this.Close();
+                this.Hide();
             }
             catch (Exception)
             {
@@ -74,7 +74,7 @@ namespace PRG2782Project.Presentation_Layer
             {
                 frmDeleteModule delete = new frmDeleteModule();
                 delete.Show();
-                this.Close();
+                this.Hide();
             }
             catch (Exception)
             {
@@ -89,7 +89,7 @@ namespace PRG2782Project.Presentation_Layer
             {
                 frmUpdateModule update = new frmUpdateModule();
                 update.Show();
-                this.Close();
+                this.Hide();
             }
             catch(Exception)
             {
