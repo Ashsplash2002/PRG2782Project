@@ -43,11 +43,11 @@ namespace PRG2782Project
             {
                 //string studentGender, string studentPhone, string studentAddress, string moduleCode, string studentImage
                 //pbStudentImage.Text???
-                data.UpdateStudent(txtStudentCode.Text, txtStudentNameandSurname.Text, txtstudentsurname.Text, DateTime.Parse(txtDOB.Text), txtGender.Text, txtPhone.Text, txtAddress.Text, pbStudentImage.Text);
+                data.UpdateStudent(txtStudentCode.Text, txtStudentNameandSurname.Text, txtstudentsurname.Text, DateTime.Parse(dtpdob.Text), txtGender.Text, txtPhone.Text, txtAddress.Text, pbStudentImage.Text);
                 MessageBox.Show("Student Updated");
                 txtStudentNameandSurname.Clear();
                 txtstudentsurname.Clear();
-                txtDOB.Clear();
+                //dtpdob;
                 txtGender.Clear();
                 txtPhone.Clear();
                 txtAddress.Clear();
@@ -80,6 +80,25 @@ namespace PRG2782Project
             catch (Exception)
             {
                 MessageBox.Show("Not able to search module");
+            }
+        }
+
+        private void btnupload_Click(object sender, EventArgs e)
+        {
+            string image;
+            try
+            {
+                OpenFileDialog imageUpload = new OpenFileDialog();
+                imageUpload.Filter = "Image Files (*.jpg;*.jpeg;.*.gif;)|*.jpg;*.jpeg;.*.gif";
+                if (imageUpload.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    image = imageUpload.FileName;
+                    pbStudentImage.ImageLocation = image;
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("error occurred");
             }
         }
     }
