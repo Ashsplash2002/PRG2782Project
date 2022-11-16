@@ -166,3 +166,23 @@ D:\Class\PRG2782\Project\latest versio\second version\PRG2782Project-master (19)
 D:\Class\PRG2782\Project\latest versio\second version\PRG2782Project-master (19)\PRG2782Project-master\obj\Debug\PRG2782Project.csproj.CoreCompileInputs.cache
 D:\Class\PRG2782\Project\latest versio\second version\PRG2782Project-master (19)\PRG2782Project-master\obj\Debug\PRG2782Project.exe
 D:\Class\PRG2782\Project\latest versio\second version\PRG2782Project-master (19)\PRG2782Project-master\obj\Debug\PRG2782Project.pdb
+C:\Users\ratki\Source\Repos\PRG2782Project\bin\Debug\PRG2782Project.exe.config
+C:\Users\ratki\Source\Repos\PRG2782Project\bin\Debug\PRG2782Project.exe
+C:\Users\ratki\Source\Repos\PRG2782Project\bin\Debug\PRG2782Project.pdb
+C:\Users\ratki\Source\Repos\PRG2782Project\obj\Debug\PRG2782Project.csproj.AssemblyReference.cache
+C:\Users\ratki\Source\Repos\PRG2782Project\obj\Debug\PRG2782Project.csproj.SuggestedBindingRedirects.cache
+C:\Users\ratki\Source\Repos\PRG2782Project\obj\Debug\PRG2782Project.frmDeleteModule.resources
+C:\Users\ratki\Source\Repos\PRG2782Project\obj\Debug\PRG2782Project.frmDeleteStudent.resources
+C:\Users\ratki\Source\Repos\PRG2782Project\obj\Debug\PRG2782Project.frmSearchModules.resources
+C:\Users\ratki\Source\Repos\PRG2782Project\obj\Debug\PRG2782Project.frmSearchStudent.resources
+C:\Users\ratki\Source\Repos\PRG2782Project\obj\Debug\PRG2782Project.frmUpdateModule.resources
+C:\Users\ratki\Source\Repos\PRG2782Project\obj\Debug\PRG2782Project.frmUpdateStudent.resources
+C:\Users\ratki\Source\Repos\PRG2782Project\obj\Debug\PRG2782Project.Presentation_Layer.frmLoginNEW.resources
+C:\Users\ratki\Source\Repos\PRG2782Project\obj\Debug\PRG2782Project.Presentation_Layer.frmMenuNEW.resources
+C:\Users\ratki\Source\Repos\PRG2782Project\obj\Debug\PRG2782Project.Presentation_Layer.frmModuleNEW.resources
+C:\Users\ratki\Source\Repos\PRG2782Project\obj\Debug\PRG2782Project.Presentation_Layer.frmStudentNEW.resources
+C:\Users\ratki\Source\Repos\PRG2782Project\obj\Debug\PRG2782Project.Properties.Resources.resources
+C:\Users\ratki\Source\Repos\PRG2782Project\obj\Debug\PRG2782Project.csproj.GenerateResource.cache
+C:\Users\ratki\Source\Repos\PRG2782Project\obj\Debug\PRG2782Project.csproj.CoreCompileInputs.cache
+C:\Users\ratki\Source\Repos\PRG2782Project\obj\Debug\PRG2782Project.exe
+C:\Users\ratki\Source\Repos\PRG2782Project\obj\Debug\PRG2782Project.pdb

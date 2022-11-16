@@ -169,6 +169,17 @@ namespace PRG2782Project
             return mystudent;
         }
 
+        //Used for see all button
+        public DataTable SeeAll()
+        {
+     
+            string seeallquery = @"SELECT * FROM students";
+            SqlDataAdapter da = new SqlDataAdapter(seeallquery, connection);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
+     
+        }
 
         // Read Student
         public List<Student> ReadStudent()
@@ -248,7 +259,7 @@ namespace PRG2782Project
         // Delete Student
         public void DeleteStudent(string studentID)
         {
-            string queryDelete = $@"DELETE FROM students WHERE stdNum='{studentID}')";
+            string queryDelete = @"DELETE FROM students WHERE stdNum='" + studentID + "'";
             connection.Open();
             command = new SqlCommand(queryDelete, connection);
 
