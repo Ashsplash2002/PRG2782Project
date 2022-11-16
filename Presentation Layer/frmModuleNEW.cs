@@ -27,7 +27,7 @@ namespace PRG2782Project.Presentation_Layer
             {
                 frmMenuNEW menu = new frmMenuNEW();
                 menu.Show();
-                this.Close();
+                this.Hide();
             }
             catch (Exception ex)
             {
