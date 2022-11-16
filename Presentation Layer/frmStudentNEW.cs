@@ -160,6 +160,7 @@ namespace PRG2782Project.Presentation_Layer
             try
             {
                 dgvStudents.DataSource = data.ReadStudent();
+                
             }
             catch (Exception)
             {

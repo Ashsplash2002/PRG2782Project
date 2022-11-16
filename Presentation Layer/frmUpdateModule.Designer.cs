@@ -222,7 +222,7 @@
             this.Name = "frmUpdateModule";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmUpdateModule";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmUpdateModule_FormClosed);
+            //this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmUpdateModule_FormClosed);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

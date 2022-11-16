@@ -47,38 +47,9 @@ namespace PRG2782Project
         }
 
 
-        // Read Module
-        //public List<Module> ReadModule()
-        //{
-        //    string viewquery = @"SELECT * FROM modules";
-        //    connection.Open();
-        //    command = new SqlCommand(viewquery, connection);
-
-        //    try
-        //    {
-        //        dataReader = command.ExecuteReader();
-
-        //        while (dataReader.Read())
-        //        {
-        //            modules.Add(new Module(dataReader[0].ToString(), dataReader[1].ToString(), dataReader[2].ToString(), dataReader[3].ToString()));
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show("Something went wrong: " + ex);
-        //    }
-        //    finally
-        //    {
-        //        connection.Close();
-        //    }
-        //    return modules;
-        //}
+        
         public DataTable ReadModule()
         {
-
-
-
-
             string query = @"Select * from modules";
             SqlDataAdapter adapter = new SqlDataAdapter(query, connection);
             DataTable dt = new DataTable();
@@ -157,29 +128,7 @@ namespace PRG2782Project
         }
 
 
-        // Search Student
-        //public void SearchStudent(string studentID)
-        //{
-        //    dataReader = null;
-
-        //    string querySearch = $@"SELECT * FROM students WHERE stdNum='{studentID}'";
-        //    connection.Open();
-        //    command = new SqlCommand(querySearch, connection);
-
-        //    try
-        //    {
-        //        dataReader = command.ExecuteReader();
-        //        MessageBox.Show("Search successful");
-        //    }
-        //    catch (Exception)
-        //    {
-        //        MessageBox.Show("Search failed");
-        //    }
-        //    finally
-        //    {
-        //        connection.Close();
-        //    }
-        //}
+        
         public List<Student> SearchStudent(string studentID)
         {
             string querySearch = $@"SELECT * FROM students WHERE stdNum='{studentID}'";

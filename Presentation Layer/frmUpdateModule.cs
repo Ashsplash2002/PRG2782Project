@@ -27,10 +27,7 @@ namespace PRG2782Project
             this.Close();
         }
 
-        private void frmUpdateModule_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Environment.Exit(0);
-        }
+        
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
