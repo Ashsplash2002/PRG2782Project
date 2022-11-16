@@ -95,7 +95,7 @@
             // dtpDOB
             // 
             this.dtpDOB.Location = new System.Drawing.Point(292, 236);
-            this.dtpDOB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpDOB.Margin = new System.Windows.Forms.Padding(4);
             this.dtpDOB.Name = "dtpDOB";
             this.dtpDOB.Size = new System.Drawing.Size(280, 22);
             this.dtpDOB.TabIndex = 4;
@@ -103,7 +103,7 @@
             // btnUpload
             // 
             this.btnUpload.Location = new System.Drawing.Point(292, 186);
-            this.btnUpload.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnUpload.Margin = new System.Windows.Forms.Padding(4);
             this.btnUpload.Name = "btnUpload";
             this.btnUpload.Size = new System.Drawing.Size(100, 28);
             this.btnUpload.TabIndex = 22;
@@ -288,7 +288,7 @@
             this.btnSearch.FlatAppearance.BorderSize = 0;
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearch.ForeColor = System.Drawing.Color.White;
-            this.btnSearch.Location = new System.Drawing.Point(321, 33);
+            this.btnSearch.Location = new System.Drawing.Point(292, 33);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(109, 44);
@@ -303,7 +303,7 @@
             this.btnCreate.FlatAppearance.BorderSize = 0;
             this.btnCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCreate.ForeColor = System.Drawing.Color.White;
-            this.btnCreate.Location = new System.Drawing.Point(5, 33);
+            this.btnCreate.Location = new System.Drawing.Point(62, 34);
             this.btnCreate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(109, 44);
@@ -318,7 +318,7 @@
             this.btnDelete.FlatAppearance.BorderSize = 0;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(480, 33);
+            this.btnDelete.Location = new System.Drawing.Point(407, 33);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(109, 44);
@@ -333,7 +333,7 @@
             this.btnUpdate.FlatAppearance.BorderSize = 0;
             this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(153, 33);
+            this.btnUpdate.Location = new System.Drawing.Point(177, 34);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(109, 44);
