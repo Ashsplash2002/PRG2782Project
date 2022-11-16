@@ -25,7 +25,7 @@ namespace PRG2782Project
             {
                 frmModuleNEW module = new frmModuleNEW();
                 module.Show();
-                this.Close();
+                this.Hide();
             }
             catch(Exception)
             {

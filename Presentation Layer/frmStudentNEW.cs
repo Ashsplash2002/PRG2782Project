@@ -34,7 +34,7 @@ namespace PRG2782Project.Presentation_Layer
             {
                 frmUpdateStudent frm = new frmUpdateStudent();
                 frm.Show();
-                this.Close();
+                this.Hide();
             }
 
             catch (Exception)
@@ -49,7 +49,7 @@ namespace PRG2782Project.Presentation_Layer
             {
                 frmSearchStudent frmSearch = new frmSearchStudent();
                 frmSearch.Show();
-                this.Close();
+                this.Hide();
             }
             catch (Exception)
             {
@@ -63,7 +63,7 @@ namespace PRG2782Project.Presentation_Layer
             {
                 frmDeleteStudent delete = new frmDeleteStudent();
                 delete.Show();
-                this.Close();
+                this.Hide();
             }
             catch (Exception)
             {

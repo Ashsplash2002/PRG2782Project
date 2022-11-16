@@ -23,7 +23,7 @@ namespace PRG2782Project
         {
             frmStudentNEW student = new frmStudentNEW();
             student.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void frmDeleteStudent_FormClosed(object sender, FormClosedEventArgs e)

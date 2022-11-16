@@ -23,7 +23,7 @@ namespace PRG2782Project
         {
             frmModuleNEW module = new frmModuleNEW();
             module.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void frmDeleteModule_Load(object sender, EventArgs e)

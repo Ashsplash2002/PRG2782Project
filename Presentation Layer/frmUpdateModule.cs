@@ -22,7 +22,6 @@ namespace PRG2782Project
 
         private void btnback_Click(object sender, EventArgs e)
         {
-
             frmModuleNEW module = new frmModuleNEW();
             module.Show();
             this.Close();
