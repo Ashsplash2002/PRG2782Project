@@ -49,14 +49,12 @@ namespace PRG2782Project
         {
             try
             {
-                List<Module> modules = new List<Module>();
-                modules = data.SearchModule(txtModuleCode.Text);
-                foreach (var item in modules)
-                {
-                    txtModuleName.Text = item.ModuleName;
-                    txtModuleDescription.Text = item.ModuleDescription;
-                    txtLinks.Text = item.ModuleLink;
-                }
+                string modCode = txtModuleCode.Text;
+                Module mod = new Module();
+                mod = data.FindFill(modCode, mod);
+                txtModuleDescription.Text = mod.ModuleDescription;
+                txtModuleName.Text = mod.ModuleName;
+                txtLinks.Text = mod.ModuleLink;
             }
             catch (Exception)
             {

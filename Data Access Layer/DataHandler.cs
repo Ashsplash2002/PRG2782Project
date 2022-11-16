@@ -20,10 +20,42 @@ namespace PRG2782Project
         List<Module> modules = new List<Module>();
         List<Student> students = new List<Student>();
 
+        //Optimized Search method
+        public DataTable Search(string moduleCode)
+        {
+            string query = @"Select * from modules WHERE modCode='" + moduleCode + "'";
+            SqlDataAdapter da = new SqlDataAdapter(query, connection);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
 
-        // Search Module
+        }
+
+        public Module FindFill(string modCode, Module mod)
+        {
+
+            DataTable dt = new DataTable();
+
+            connection.Open();
+            SqlCommand sqlCmd = new SqlCommand("SELECT * from modules WHERE modCode ='" + modCode + "'", connection);
+            SqlDataAdapter sqlDa = new SqlDataAdapter(sqlCmd);
+            sqlDa.Fill(dt);
+            if (dt.Rows.Count > 0)
+            {
+                mod.ModuleName = dt.Rows[0]["modName"].ToString(); 
+                mod.ModuleDescription = dt.Rows[0]["modDesc"].ToString();
+                mod.ModuleLink = dt.Rows[0]["link"].ToString();
+            }
+            connection.Close();
+            return mod;
+
+
+        }
+
+        // Search Module--------Please double check this method, if its being used, and if it actaully works.
         public List<Module> SearchModule(string moduleCode)
         {
+
             dataReader = null;
 
             string querySearch = $@"SELECT * FROM modules WHERE modCode='{moduleCode}'";

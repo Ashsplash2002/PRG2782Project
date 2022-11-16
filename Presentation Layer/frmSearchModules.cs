@@ -63,7 +63,9 @@ namespace PRG2782Project
         {
             try
             {
-                dgvSearchModules.DataSource = data.SearchModule(txtModuleCode.Text);
+                DataHandler data = new DataHandler();
+                string modCode = txtModuleCode.Text;
+                dgvSearchModules.DataSource = data.Search(modCode);
             }
             catch (Exception)
             {

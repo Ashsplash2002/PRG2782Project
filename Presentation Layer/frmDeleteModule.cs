@@ -54,7 +54,9 @@ namespace PRG2782Project
         {
             try
             {
-                dgvdelete.DataSource = data.SearchModule(txtModuleCode.Text);
+                DataHandler data = new DataHandler();
+                string modCode = txtModuleCode.Text;
+                dgvdelete.DataSource = data.Search(modCode);
             }
             catch (Exception)
             {
