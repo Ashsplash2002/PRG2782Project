@@ -268,7 +268,7 @@ namespace PRG2782Project
         //took out modulecode: string moduleCode; moduleCode='{moduleCode}'
         public void UpdateStudent(string studentID, string studentName, string studentSurname, DateTime studentDOB, string studentGender, string studentPhone, string studentAddress, string studentImage)
         {
-            string queryUpdate = $@"UPDATE students SET stdNum='{studentID}', stdName='{studentName}', stdSurname='{studentSurname}', stdImage='{studentImage}', dateObirth='{studentDOB}' ,gender='{studentGender}', phoneNum='{studentPhone}', address='{studentAddress}', ' WHERE StudentID='{studentID}'";
+            string queryUpdate = $@"UPDATE students SET stdNum='{studentID}', stdName='{studentName}', stdSurname='{studentSurname}', stdImage='{studentImage}', dateObirth='{studentDOB}' ,gender='{studentGender}', phoneNum='{studentPhone}', address='{studentAddress}'  WHERE stdNum='{studentID}'";
             connection.Open();
             command = new SqlCommand(queryUpdate, connection);
 
