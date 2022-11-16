@@ -49,18 +49,6 @@ ALTER TABLE students
 GO
 
 
-
-
-
-
-
--- This is for the relationship between modules and student tables
-
-ALTER TABLE students
-  ADD CONSTRAINT students_ibfk_1 FOREIGN KEY (moduleCode) REFERENCES modules (modCode)
-GO
-
-
 -- Adds dummy data for modules table
 
 INSERT INTO modules(modCode, modName, modDesc, link)
