@@ -53,30 +53,30 @@ namespace PRG2782Project
         }
 
         // Search Module--------Please double check this method, if its being used, and if it actaully works.
-        public List<Module> SearchModule(string moduleCode)
-        {
+        //public List<Module> SearchModule(string moduleCode)
+        //{
 
-            dataReader = null;
+        //    dataReader = null;
 
-            string querySearch = $@"SELECT * FROM modules WHERE modCode='{moduleCode}'";
-            connection.Open();
-            command = new SqlCommand(querySearch, connection);
+        //    string querySearch = $@"SELECT * FROM modules WHERE modCode='{moduleCode}'";
+        //    connection.Open();
+        //    command = new SqlCommand(querySearch, connection);
 
-            try
-            {
-                dataReader = command.ExecuteReader();
-                MessageBox.Show("Search successful");
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Search failed");
-            }
-            finally
-            {
-                connection.Close();
-            }
-            return modules;
-        }
+        //    try
+        //    {
+        //        dataReader = command.ExecuteReader();
+        //        MessageBox.Show("Search successful");
+        //    }
+        //    catch (Exception)
+        //    {
+        //        MessageBox.Show("Search failed");
+        //    }
+        //    finally
+        //    {
+        //        connection.Close();
+        //    }
+        //    return modules;
+        //}
 
 
         
