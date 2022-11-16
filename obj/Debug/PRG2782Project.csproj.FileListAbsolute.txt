@@ -86,3 +86,23 @@ C:\Users\Heinrich\Source\Repos\Ashsplash2002\PRG2782Project\obj\Debug\PRG2782Pro
 C:\Users\Heinrich\Source\Repos\Ashsplash2002\PRG2782Project\obj\Debug\PRG2782Project.csproj.CoreCompileInputs.cache
 C:\Users\Heinrich\Source\Repos\Ashsplash2002\PRG2782Project\obj\Debug\PRG2782Project.exe
 C:\Users\Heinrich\Source\Repos\Ashsplash2002\PRG2782Project\obj\Debug\PRG2782Project.pdb
+D:\Class\PRG2782\Project\latest versio\PRG2782Project-master (15)\PRG2782Project-master\obj\Debug\PRG2782Project.csproj.AssemblyReference.cache
+D:\Class\PRG2782\Project\latest versio\PRG2782Project-master (15)\PRG2782Project-master\obj\Debug\PRG2782Project.csproj.SuggestedBindingRedirects.cache
+D:\Class\PRG2782\Project\latest versio\PRG2782Project-master (15)\PRG2782Project-master\obj\Debug\PRG2782Project.frmDeleteModule.resources
+D:\Class\PRG2782\Project\latest versio\PRG2782Project-master (15)\PRG2782Project-master\obj\Debug\PRG2782Project.frmDeleteStudent.resources
+D:\Class\PRG2782\Project\latest versio\PRG2782Project-master (15)\PRG2782Project-master\obj\Debug\PRG2782Project.frmSearchModules.resources
+D:\Class\PRG2782\Project\latest versio\PRG2782Project-master (15)\PRG2782Project-master\obj\Debug\PRG2782Project.frmSearchStudent.resources
+D:\Class\PRG2782\Project\latest versio\PRG2782Project-master (15)\PRG2782Project-master\obj\Debug\PRG2782Project.frmUpdateModule.resources
+D:\Class\PRG2782\Project\latest versio\PRG2782Project-master (15)\PRG2782Project-master\obj\Debug\PRG2782Project.frmUpdateStudent.resources
+D:\Class\PRG2782\Project\latest versio\PRG2782Project-master (15)\PRG2782Project-master\obj\Debug\PRG2782Project.Presentation_Layer.frmLoginNEW.resources
+D:\Class\PRG2782\Project\latest versio\PRG2782Project-master (15)\PRG2782Project-master\obj\Debug\PRG2782Project.Presentation_Layer.frmMenuNEW.resources
+D:\Class\PRG2782\Project\latest versio\PRG2782Project-master (15)\PRG2782Project-master\obj\Debug\PRG2782Project.Presentation_Layer.frmModuleNEW.resources
+D:\Class\PRG2782\Project\latest versio\PRG2782Project-master (15)\PRG2782Project-master\obj\Debug\PRG2782Project.Presentation_Layer.frmStudentNEW.resources
+D:\Class\PRG2782\Project\latest versio\PRG2782Project-master (15)\PRG2782Project-master\obj\Debug\PRG2782Project.Properties.Resources.resources
+D:\Class\PRG2782\Project\latest versio\PRG2782Project-master (15)\PRG2782Project-master\obj\Debug\PRG2782Project.csproj.GenerateResource.cache
+D:\Class\PRG2782\Project\latest versio\PRG2782Project-master (15)\PRG2782Project-master\obj\Debug\PRG2782Project.csproj.CoreCompileInputs.cache
+D:\Class\PRG2782\Project\latest versio\PRG2782Project-master (15)\PRG2782Project-master\obj\Debug\PRG2782Project.exe
+D:\Class\PRG2782\Project\latest versio\PRG2782Project-master (15)\PRG2782Project-master\obj\Debug\PRG2782Project.pdb
+D:\Class\PRG2782\Project\latest versio\PRG2782Project-master (15)\PRG2782Project-master\bin\Debug\PRG2782Project.exe.config
+D:\Class\PRG2782\Project\latest versio\PRG2782Project-master (15)\PRG2782Project-master\bin\Debug\PRG2782Project.exe
+D:\Class\PRG2782\Project\latest versio\PRG2782Project-master (15)\PRG2782Project-master\bin\Debug\PRG2782Project.pdb

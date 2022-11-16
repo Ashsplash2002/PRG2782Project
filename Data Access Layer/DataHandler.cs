@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 
@@ -47,30 +48,43 @@ namespace PRG2782Project
 
 
         // Read Module
-        public List<Module> ReadModule()
+        //public List<Module> ReadModule()
+        //{
+        //    string viewquery = @"SELECT * FROM modules";
+        //    connection.Open();
+        //    command = new SqlCommand(viewquery, connection);
+
+        //    try
+        //    {
+        //        dataReader = command.ExecuteReader();
+
+        //        while (dataReader.Read())
+        //        {
+        //            modules.Add(new Module(dataReader[0].ToString(), dataReader[1].ToString(), dataReader[2].ToString(), dataReader[3].ToString()));
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show("Something went wrong: " + ex);
+        //    }
+        //    finally
+        //    {
+        //        connection.Close();
+        //    }
+        //    return modules;
+        //}
+        public DataTable ReadModule()
         {
-            string viewquery = @"SELECT * FROM modules";
-            connection.Open();
-            command = new SqlCommand(viewquery, connection);
 
-            try
-            {
-                dataReader = command.ExecuteReader();
 
-                while (dataReader.Read())
-                {
-                    modules.Add(new Module(dataReader[0].ToString(), dataReader[1].ToString(), dataReader[2].ToString(), dataReader[3].ToString()));
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Something went wrong: " + ex);
-            }
-            finally
-            {
-                connection.Close();
-            }
-            return modules;
+
+
+            string query = @"Select * from modules";
+            SqlDataAdapter adapter = new SqlDataAdapter(query, connection);
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+            return dt;
+            //dgvshow.DataSource = dt;
         }
 
 
@@ -144,27 +158,66 @@ namespace PRG2782Project
 
 
         // Search Student
-        public void SearchStudent(int studentID)
-        {
-            dataReader = null;
+        //public void SearchStudent(string studentID)
+        //{
+        //    dataReader = null;
 
+        //    string querySearch = $@"SELECT * FROM students WHERE stdNum='{studentID}'";
+        //    connection.Open();
+        //    command = new SqlCommand(querySearch, connection);
+
+        //    try
+        //    {
+        //        dataReader = command.ExecuteReader();
+        //        MessageBox.Show("Search successful");
+        //    }
+        //    catch (Exception)
+        //    {
+        //        MessageBox.Show("Search failed");
+        //    }
+        //    finally
+        //    {
+        //        connection.Close();
+        //    }
+        //}
+        public List<Student> SearchStudent(string studentID)
+        {
             string querySearch = $@"SELECT * FROM students WHERE stdNum='{studentID}'";
             connection.Open();
             command = new SqlCommand(querySearch, connection);
 
+            List<Student> mystudent = new List<Student>();
+
+            Student objstudent = new Student();
+
             try
             {
                 dataReader = command.ExecuteReader();
-                MessageBox.Show("Search successful");
+
+                if (dataReader.Read())
+                {
+                    objstudent.StudentNumber = int.Parse(dataReader[0].ToString());
+                    objstudent.StudentName = dataReader[1].ToString();
+                    objstudent.StudentSurname = dataReader[2].ToString();
+                    objstudent.StudentImage = dataReader[3].ToString();
+                    objstudent.StudentGender = dataReader[4].ToString();
+                    objstudent.StudentPhone = dataReader[5].ToString();
+                    objstudent.StudentAddress = dataReader[6].ToString();
+                    objstudent.ModuleCodes = dataReader[7].ToString();
+                    objstudent.StudentDOB = Convert.ToDateTime(dataReader[8].ToString());
+
+                    mystudent.Add(new Student(objstudent.StudentNumber, objstudent.StudentName, objstudent.StudentSurname, objstudent.StudentImage, objstudent.StudentGender, objstudent.StudentPhone, objstudent.StudentAddress, objstudent.ModuleCodes, objstudent.StudentDOB));
+                }
             }
-            catch (Exception)
+            catch (Exception er)
             {
-                MessageBox.Show("Search failed");
+                MessageBox.Show("Error " + er);
             }
             finally
             {
                 connection.Close();
             }
+            return mystudent;
         }
 
 
@@ -220,9 +273,10 @@ namespace PRG2782Project
 
 
         // Update Student
-        public void UpdateStudent(string studentID, string studentName, string studentSurname, DateTime studentDOB, string studentGender, string studentPhone, string studentAddress, string moduleCode, string studentImage)
+        //took out modulecode: string moduleCode; moduleCode='{moduleCode}'
+        public void UpdateStudent(string studentID, string studentName, string studentSurname, DateTime studentDOB, string studentGender, string studentPhone, string studentAddress, string studentImage)
         {
-            string queryUpdate = $@"UPDATE students SET stdNum='{studentID}', stdName='{studentName}', stdSurname='{studentSurname}', stdImage='{studentImage}', dateObirth='{studentDOB}' ,gender='{studentGender}', phoneNum='{studentPhone}', address='{studentAddress}', moduleCode='{moduleCode}' WHERE StudentID='{studentID}'";
+            string queryUpdate = $@"UPDATE students SET stdNum='{studentID}', stdName='{studentName}', stdSurname='{studentSurname}', stdImage='{studentImage}', dateObirth='{studentDOB}' ,gender='{studentGender}', phoneNum='{studentPhone}', address='{studentAddress}', ' WHERE StudentID='{studentID}'";
             connection.Open();
             command = new SqlCommand(queryUpdate, connection);
 

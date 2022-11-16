@@ -13,6 +13,8 @@ namespace PRG2782Project
 {
     public partial class frmUpdateStudent : Form
     {
+        DataHandler data = new DataHandler();
+
         public frmUpdateStudent()
         {
             InitializeComponent();
@@ -33,6 +35,52 @@ namespace PRG2782Project
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                //string studentGender, string studentPhone, string studentAddress, string moduleCode, string studentImage
+                //pbStudentImage.Text???
+                data.UpdateStudent(txtStudentCode.Text, txtStudentNameandSurname.Text, txtstudentsurname.Text, DateTime.Parse(txtDOB.Text), txtGender.Text, txtPhone.Text, txtAddress.Text, pbStudentImage.Text);
+                MessageBox.Show("Student Updated");
+                txtStudentNameandSurname.Clear();
+                txtstudentsurname.Clear();
+                txtDOB.Clear();
+                txtGender.Clear();
+                txtPhone.Clear();
+                txtAddress.Clear();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Not able to update module");
+            }
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                List<Student> students = new List<Student>();
+                students = data.SearchStudent(txtStudentCode.Text);
+                foreach (var item in students)
+                {
+                    //Image.Text???
+                    txtStudentNameandSurname.Text = item.StudentName;
+                    txtstudentsurname.Text = item.StudentSurname;
+                    pbStudentImage.Text = item.StudentImage;
+                    txtGender.Text = item.StudentGender;
+                    txtPhone.Text = item.StudentPhone;
+                    txtAddress.Text = item.StudentAddress;
+                    //modulecode
+                    //studentDOB
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Not able to search module");
+            }
         }
     }
 }

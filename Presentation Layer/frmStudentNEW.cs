@@ -154,5 +154,17 @@ namespace PRG2782Project.Presentation_Layer
                 dtpDOB.Text = dgvStudents.Rows[e.RowIndex].Cells["dateObirth"].FormattedValue.ToString();
             }
         }
+
+        private void btnseeall_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                dgvStudents.DataSource = data.ReadStudent();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Not able to see all students");
+            }
+        }
     }
 }

@@ -13,6 +13,7 @@ namespace PRG2782Project
 {
     public partial class frmDeleteStudent : Form
     {
+        DataHandler data = new DataHandler();
         public frmDeleteStudent()
         {
             InitializeComponent();
@@ -28,6 +29,31 @@ namespace PRG2782Project
         private void frmDeleteStudent_FormClosed(object sender, FormClosedEventArgs e)
         {
             Environment.Exit(0);
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                data.DeleteStudent(txtStudentCode.Text);
+                MessageBox.Show("Student Deleted");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Not able to delete student");
+            }
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                dgvDelete.DataSource = data.SearchStudent(txtStudentCode.Text);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Not able to search student");
+            }
         }
     }
 }

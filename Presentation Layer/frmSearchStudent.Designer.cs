@@ -44,10 +44,10 @@
             this.btnback.FlatAppearance.BorderSize = 0;
             this.btnback.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnback.ForeColor = System.Drawing.Color.White;
-            this.btnback.Location = new System.Drawing.Point(316, 359);
-            this.btnback.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnback.Location = new System.Drawing.Point(237, 292);
+            this.btnback.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnback.Name = "btnback";
-            this.btnback.Size = new System.Drawing.Size(149, 33);
+            this.btnback.Size = new System.Drawing.Size(112, 27);
             this.btnback.TabIndex = 28;
             this.btnback.Text = "Back to Student Form";
             this.btnback.UseVisualStyleBackColor = false;
@@ -59,40 +59,42 @@
             this.btnSearch.FlatAppearance.BorderSize = 0;
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearch.ForeColor = System.Drawing.Color.White;
-            this.btnSearch.Location = new System.Drawing.Point(31, 359);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSearch.Location = new System.Drawing.Point(23, 292);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(93, 33);
+            this.btnSearch.Size = new System.Drawing.Size(70, 27);
             this.btnSearch.TabIndex = 27;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // txtStudentCode
             // 
-            this.txtStudentCode.Location = new System.Drawing.Point(219, 86);
-            this.txtStudentCode.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtStudentCode.Location = new System.Drawing.Point(164, 70);
+            this.txtStudentCode.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtStudentCode.Name = "txtStudentCode";
-            this.txtStudentCode.Size = new System.Drawing.Size(247, 22);
+            this.txtStudentCode.Size = new System.Drawing.Size(186, 20);
             this.txtStudentCode.TabIndex = 26;
             // 
             // dgvSearch
             // 
             this.dgvSearch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSearch.Location = new System.Drawing.Point(31, 125);
-            this.dgvSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvSearch.Location = new System.Drawing.Point(23, 102);
+            this.dgvSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvSearch.Name = "dgvSearch";
             this.dgvSearch.RowHeadersWidth = 51;
             this.dgvSearch.RowTemplate.Height = 24;
-            this.dgvSearch.Size = new System.Drawing.Size(435, 206);
+            this.dgvSearch.Size = new System.Drawing.Size(326, 167);
             this.dgvSearch.TabIndex = 23;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(24, 20);
+            this.label6.Location = new System.Drawing.Point(18, 16);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(437, 39);
+            this.label6.Size = new System.Drawing.Size(354, 31);
             this.label6.TabIndex = 25;
             this.label6.Text = "Search A Specific Student";
             // 
@@ -100,27 +102,29 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label1.Location = new System.Drawing.Point(339, 30);
+            this.label1.Location = new System.Drawing.Point(254, 24);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 29);
+            this.label1.Size = new System.Drawing.Size(0, 25);
             this.label1.TabIndex = 24;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(27, 84);
+            this.label2.Location = new System.Drawing.Point(20, 68);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(185, 24);
+            this.label2.Size = new System.Drawing.Size(145, 18);
             this.label2.TabIndex = 22;
             this.label2.Text = "Enter Student Code: ";
             // 
             // frmSearchStudent
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(507, 410);
+            this.ClientSize = new System.Drawing.Size(380, 333);
             this.Controls.Add(this.btnback);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtStudentCode);
@@ -128,7 +132,7 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmSearchStudent";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmSearchStudent";
